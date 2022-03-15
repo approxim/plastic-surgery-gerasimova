@@ -1,0 +1,41 @@
+.header {
+    width: auto;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 13px 20px 0;
+    border: 1px solid $color-white;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 500;
+
+    @media (min-width: $desktop-width) {
+
+    }
+}
+
+.header img {
+    padding-top: 12px;
+
+    @media (min-width: $tablet-width) {
+        width: 258px;
+        height: 55px;
+    }
+}
+
+.nav-main {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+.nav-main__list {
+    display: flex;
+}
