@@ -57,6 +57,32 @@ body {
   border-radius: 0;
   background-color: $color-brown;
   color: $color-white;
-  padding: 16px 24px;
-  font-weight: 500;
+  padding: 16px 23px;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 700;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+
+.lite-button {
+  border: 1px solid $color-brown;
+  border-radius: 0;
+  background-color: $color-white;
+  color: $color-brown;
+  padding: 16px 23px;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 700;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 130%;
+  }
+
 }

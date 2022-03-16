@@ -153,8 +153,35 @@ body {
   border-radius: 0;
   background-color: #a98143;
   color: #ffffff;
-  padding: 16px 24px;
-  font-weight: 500;
+  padding: 16px 23px;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .brown-button {
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+
+.lite-button {
+  border: 1px solid #a98143;
+  border-radius: 0;
+  background-color: #ffffff;
+  color: #a98143;
+  padding: 16px 23px;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .lite-button {
+    font-size: 20px;
+    line-height: 130%;
+  }
 }
 
 .header {
