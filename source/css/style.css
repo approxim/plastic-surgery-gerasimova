@@ -92,6 +92,10 @@ ul, li {
   box-sizing: border-box;
 }
 
+button, a {
+  cursor: pointer;
+}
+
 html {
   height: 100%;
 }
@@ -157,7 +161,6 @@ body {
   font-size: 14px;
   line-height: 130%;
   font-weight: 700;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
   .brown-button {
@@ -175,7 +178,6 @@ body {
   font-size: 14px;
   line-height: 130%;
   font-weight: 700;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
   .lite-button {
