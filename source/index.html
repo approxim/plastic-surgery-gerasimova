@@ -11,8 +11,9 @@
 <body>
     <!-- Header -->
     <header class="header container">
-        <!-- <div class="container"> -->
-            <img src="media/icons/logo_gerasimova_white.svg" alt="logo" width="140" height="22">
+            <a href="#">
+                <img src="media/icons/logo_gerasimova_white.svg" alt="logo" width="140" height="22">
+            </a>
 
             <nav class="nav-main">
                 <ul class="nav-main__list">
@@ -49,7 +50,6 @@
             </nav>
         <!-- </div> -->
     </header>
-
 
     <main class="main">
         <h1 class="visually-hidden">Пластическая хирургия от профессионала</h1>
@@ -458,7 +458,7 @@
         <section class="feedback container">
             <h2 class="visually-hidden">Запись на бесплатную консультацию</h2>
 
-            <form class="feedback__form" action="google.com" name="feedback__form" method="post">
+            <form class="feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">
                 <p class="feedback__title">Запишитесь на бесплатную консультацию</p>
                 <label class="feedback__name">
                     <span>Имя</span>
@@ -470,23 +470,27 @@
                     <input type="tel" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
                 </label>
 
-                <textarea class="feedback__text" name="text" id="" cols="30" rows="10" placeholder="Текст"></textarea>
+                <label>
+                    <span>Предмет консультации</span>
+                    <textarea class="feedback__text" name="text" id="" cols="30" rows="10" placeholder="Текст"></textarea>
+                </label>
+
 
                 <p class="feedback__city-choice">В каком городе посетите консультацию?</p>
 
                 <label class="feedback__city feedback__city--krasnoyarsk">
-                    <input type="radio" name="city" checked>
+                    <input type="radio" name="city" value="krasnoyarsk" checked>
                     <span class="feedback__mark feedback__mark--krasnoyarsk"></span>
                     <span class="feedback__label feedback__label--krasnoyarsk">Красноярск</span>
                 </label>
 
                 <label class="feedback__city feedback__city--abakan">
-                    <input type="radio" name="city" checked>
+                    <input type="radio" name="city" value="abakan" checked>
                     <span class="feedback__mark feedback__mark--abakan"></span>
                     <span class="feedback__label feedback__label--abakan">Абакан</span>
                 </label>
 
-                <button class="feedback__button" type="submit">Отправить</button>
+                <button class="feedback__button brown-button" type="submit">Отправить</button>
             </form>
 
             <div class="feedback__image"></div>
@@ -517,5 +521,48 @@
             </a>
         </div>
     </footer>
+
+    <!-- Модальное окно с формой  -->
+    <div class="modal-form" style="display: none;">
+        <h2 class="modal-form__title">Заявка на консультацию</h2>
+        <p class="modal-form__desc">Оставьте свои данные, мы вам перезвоним, чтобы назначить дату и время консультации</p>
+
+        <form class="modal-form__form" action="google.com" name="modal-form__form" method="post">
+
+            <label class="modal-form__name">
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Имя" required>
+            </label>
+
+            <label class="modal-form__tel">
+                <span>Телефон</span>
+                <input type="tel" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
+            </label>
+
+            <label class="modal-form__text">
+                <span>Предмет консультации</span>
+                <textarea name="text" id="" cols="30" rows="10" placeholder="Текст"></textarea>
+            </label>
+
+
+            <p class="modal-form__city-choice">В каком городе посетите консультацию?</p>
+
+            <label class="modal-form__city modal-form__city--krasnoyarsk">
+                <input type="radio" name="city" value="krasnoyarsk" checked>
+                <span class="modal-form__mark modal-form__mark--krasnoyarsk"></span>
+                <span class="modal-form__label modal-form__label--krasnoyarsk">Красноярск</span>
+            </label>
+
+            <label class="modal-form_city modal-form__city--abakan">
+                <input type="radio" name="city" value="abakan" checked>
+                <span class="modal-form__mark modal-form__mark--abakan"></span>
+                <span class="modal-form__label modal-form__label--abakan">Абакан</span>
+            </label>
+
+            <button class="modal-form__button" type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <!-- Модальное окно -->
 </body>
 </html>
