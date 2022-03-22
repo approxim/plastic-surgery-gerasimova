@@ -18,6 +18,13 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// Scripts
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(gulp.dest('source/js'))
+    .pipe(browser.stream());
+}
+
 // Server
 
 const server = (done) => {
@@ -41,5 +48,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  styles, scripts, server, watcher
 );
