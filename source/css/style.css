@@ -549,6 +549,11 @@ h3 {
   line-height: 130%;
   position: relative;
 }
+@media (min-width: 1440px) {
+  .principle__inner button {
+    font-size: 20px;
+  }
+}
 .principle__inner button::after {
   content: "";
   position: absolute;
