@@ -23,6 +23,10 @@
         background-color: $color-dark;
         position: absolute;
         bottom: -5px;
+
+        @media (min-width: $tablet-width) {
+            bottom: 5px;
+        }
     }
 
     & > p {
@@ -31,8 +35,7 @@
         font-size: 14px;
         line-height: 110%;
         color: $color-dark;
-        // margin-bottom: 8px;
-    
+
         @media (min-width: $tablet-width) {
             font-size: 24px;
             margin-bottom: 20px;
@@ -47,9 +50,18 @@
         display: block;
         background-color: $color-brown;
         border: none;
+        color: $color-white;
+        padding: 5px 10px;
+        
 
         @media (min-width: $tablet-width) {
             display: none;
+        }
+
+        option {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 130%;
         }
     }
 
@@ -58,6 +70,7 @@
 
         @media (min-width: $tablet-width) {
             display: block;
+
         }
 
         button {
@@ -71,12 +84,15 @@
             &.active {
                 color: $color-brown;
             }
+
+            @media (min-width: $tablet-width) {
+                font-size: 20px;
+            }
         }
     }
 }
 
 .operations__item {
-    // width: 100%;
 
     h3 {
         font-size: 18px;
