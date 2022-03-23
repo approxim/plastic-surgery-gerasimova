@@ -473,40 +473,43 @@
 
             <form class="feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">
                 <p class="feedback__title">Запишитесь на бесплатную консультацию</p>
-                <label class="feedback__name">
-                    <span>Имя</span>
-                    <input type="text" name="name" placeholder="Имя" required>
-                </label>
+                <div class="feedback__feels">
+                    <label class="feedback__name feedback__feel">
+                        <span>Имя</span>
+                        <input type="text" name="name" placeholder="Имя" required>
+                    </label>
 
-                <label class="feedback__tel">
-                    <span>Телефон</span>
-                    <input type="tel" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
-                </label>
+                    <label class="feedback__tel feedback__feel">
+                        <span>Телефон</span>
+                        <input id="feedbacktel" type="text" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
+                    </label>
 
-                <label>
-                    <span>Предмет консультации</span>
-                    <textarea class="feedback__text" name="text" id="" cols="30" rows="10" placeholder="Текст"></textarea>
-                </label>
+                    <label class="feedback__text feedback__feel">
+                        <span>Предмет консультации</span>
+                        <textarea name="text" id="" cols="30" rows="10" placeholder="Текст"></textarea>
+                    </label>
+                </div>
 
+                <div class="feedback__radio">
+                    <p class="feedback__city-choice">В каком городе посетите консультацию?</p>
 
-                <p class="feedback__city-choice">В каком городе посетите консультацию?</p>
+                    <label class="feedback__city feedback__city--krasnoyarsk">
+                        <input type="radio" name="city" value="krasnoyarsk" checked>
+                        <span class="feedback__mark feedback__mark--krasnoyarsk"></span>
+                        <span class="feedback__label feedback__label--krasnoyarsk">Красноярск</span>
+                    </label>
 
-                <label class="feedback__city feedback__city--krasnoyarsk">
-                    <input type="radio" name="city" value="krasnoyarsk" checked>
-                    <span class="feedback__mark feedback__mark--krasnoyarsk"></span>
-                    <span class="feedback__label feedback__label--krasnoyarsk">Красноярск</span>
-                </label>
-
-                <label class="feedback__city feedback__city--abakan">
-                    <input type="radio" name="city" value="abakan" checked>
-                    <span class="feedback__mark feedback__mark--abakan"></span>
-                    <span class="feedback__label feedback__label--abakan">Абакан</span>
-                </label>
+                    <label class="feedback__city feedback__city--abakan">
+                        <input type="radio" name="city" value="abakan" checked>
+                        <span class="feedback__mark feedback__mark--abakan"></span>
+                        <span class="feedback__label feedback__label--abakan">Абакан</span>
+                    </label>
+                </div>
 
                 <button class="feedback__button brown-button" type="submit">Отправить</button>
             </form>
 
-            <div class="feedback__image"></div>
+            <div class="feedback__image" display="none"></div>
         </section>
 
     </main>
@@ -580,6 +583,7 @@
 
     <script src="js/jquery-v3.6.0.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>    
     <script src="js/slider.js"></script>
     <script src="js/app.js"></script>
 </body>
