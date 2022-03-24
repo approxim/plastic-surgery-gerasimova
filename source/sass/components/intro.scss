@@ -10,20 +10,27 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     position: relative;
     z-index: 1;
+
+    padding-bottom: 20px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../media/images/main-image@2x.jpg");
     }
 
-    @media (min-width: $desktop-width) {
-        flex-direction: row;
+    @media (min-width: $tablet-width) {
+       justify-content: flex-end;
+       padding-bottom: 40px;
     }
 
-    &::after {
+    @media (min-width: $desktop-width) {
+        padding-bottom: 85px;
+    }
+
+    // темный оверлей
+    &::before {
         content: '';
         position: absolute;
         left: 0;
@@ -32,6 +39,66 @@
         bottom: 0;
         background-color: transparentize($color-opacity, 0.55);
         z-index: 0;
+    }
+
+    // нижняя декоративная рамка
+    &::after {
+        content:'';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 34px;
+        border: 1px solid $color-white;
+        border-top-width: 0;
+        margin: 0 20px 20px;
+
+        @media (min-width: $tablet-width) {
+            display: none;
+            // height: 34%;
+            // margin: 0 30px 55px;
+        }
+
+        // @media (min-width: $desktop-width) {
+        //     margin: 0 60px 87px;
+        // }
+    }
+}
+
+.intro__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+        height: 35%;
+
+        flex-direction: row;
+        align-items: flex-end;
+
+        border: 1px solid $color-white;
+        border-top-width: 0;
+
+        padding: 0 30px 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+        
+    }
+
+    &::before {
+
+        @media (min-width: $tablet-width) {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: calc(-30px + 59.5%);
+            background-color: $color-white;
+            height: 100%;
+            width: 1px;
+        }
     }
 }
 
@@ -42,6 +109,14 @@
     margin-top: 82px;
     z-index: 5;
 
+    @media (min-width: $tablet-width) {
+        font-size: 40px;
+        width: 60%;
+        margin-top: 0;
+        align-self: flex-start;
+        padding-right: 50px;
+    }
+
     @media (min-width: $desktop-width) {
         font-size: 84px;
     }
@@ -49,11 +124,47 @@
 
 .intro__sign-up {
     z-index: 5;
-    width: 100%;
-    height: 50%;
+    width: auto;
+    height: 40%;
     background-color: transparentize($color-white, 0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+
+    padding: 16px;
+    margin: 0 12px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+        height: 100%;
+        width: 40%;
+        margin: 0;
+    }
+
+
+
+    p {
+        color: $color-white;
+        font-size: 14px;
+        line-height: 130%;
+        font-weight: 400;
+
+        @media (min-width: $tablet-width) {
+            font-size: 20px;
+        }
+
+        @media (min-width: $desktop-width) {
+            font-size: 24px;
+        }
+    }
+
+    button {
+        width: 100%;
+    }
 }
 
 // .intro__blur {

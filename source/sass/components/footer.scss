@@ -11,7 +11,6 @@
         flex-direction: row;
         justify-content: space-between;
         padding-top: 40px;
-
     }
 
     @media (min-width: $desktop-width) {
@@ -50,15 +49,17 @@
     @media (min-width: $tablet-width) {
         position: absolute;
         left: 50%;
-        top: 70%;
+        top: 80%;
         transform: translate(-50%, -50%);
+        margin: 0;
     }
 
     img {
         @media (min-width: $desktop-width) {
-            
+            display: block;
             width: 258px;
-            height: 42px;
+            height: 40px;
+            box-sizing: border-box;
         }
     }
 }
@@ -69,4 +70,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+        margin: 0;
+    }
 }
