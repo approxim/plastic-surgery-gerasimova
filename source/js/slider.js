@@ -1,22 +1,44 @@
+// $(".slick-track").css("max-width", $(window).width());
+
 
 // sliders
 $(document).ready(function(){
     // operations
-    $(".operations__wrapper").slick({    
+    $(".operations__wrapper").slick({
         mobileFirst: true,
         dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true,
-        // variableWidth: true,
+        // centerMode: true,
+        variableWidth: true,
         responsive: [
           {
             breakpoint: 768,
             settings: "unslick"
           }
         ]
+    });
+
+    $(".articles__list").slick({    
+      mobileFirst: true,
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      // variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            centerMode: false,
+          }          
+        }
+      ]
     });
 
     // reviews
@@ -35,10 +57,10 @@ $(document).ready(function(){
       dots: true,
       arrows: false,
       slidesToShow: 1,
-      slidesToScroll: 1      
+      slidesToScroll: 1
     }).on('afterChange', function(event, slick){
       event.stopPropagation();
-  });    
+  });
 })
 
 // Одинаковая высота слайдов в slick slider
@@ -49,3 +71,20 @@ $('.reviews__wrapper').on('setPosition', function () {
   $(this).find('.reviews__item').css('height', slickTrackHeight + 'px');
 });	
 
+
+
+
+// clinic
+$('.clinic__slider').slick({
+  infinite: true,
+  dots: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: '<div class="prev"></div>',
+  nextArrow: '<div class="next"></div>'
+});
+
+// реинициализация слайдера при клике на табы
+$(".clinic__tab").on('click', function (e) {
+  $(".clinic__slider").slick('reinit');
+});

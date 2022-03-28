@@ -17,12 +17,14 @@
     gap: 12px;
 
     @media (min-width: $tablet-width) {
+        gap: 20px;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        gap: 32px;
     }
 
-
+    @media (min-width: $desktop-width) {
+        gap: 32px;
+    }
 }
 
 .principle__inner {
@@ -95,7 +97,6 @@
             top: 50%;
             right: -20px;
             transform: translateY(-50%);
-
             background-repeat: no-repeat;
             background-size: 11px;
             background-position: contain;
@@ -113,14 +114,29 @@
         background-image: url('../../media/icons/arrow-black.svg');
     }
 
+    p {
+        font-size: 12px;
+        line-height: 120%;
 
+        @media(min-width: $tablet-width) {
+            font-size: 16px;
+        }
+    }
+
+    &--white {
+        min-height: auto;
+        padding-left: 0;
+        padding-right: 0;
+
+        p {
+            margin-top: 8px;
+        }
+
+        @media(min-width: $tablet-width) {
+            padding: 30px;
+        }
+    }
 }
-
-// .principle__title {
-//     @media (min-width: $tablet-width) {
-//         font-size: 20px;
-//     }
-// }
 
 .principle__inner--1 {
     background-color: #958e8b;
@@ -251,4 +267,25 @@
         grid-column: 4 / 7;
         grid-row: 3 / 4;
     }
+}
+
+
+.principle__title {
+    font-size: 14px;
+    line-height: 130%;
+
+    @media (min-width: $tablet-width) {
+        font-size: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+    }
+}
+
+.principle__desc {
+    background-color: transparentize($color-white, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 12px;
 }
