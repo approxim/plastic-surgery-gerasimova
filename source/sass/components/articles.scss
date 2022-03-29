@@ -23,6 +23,46 @@
             height: 1px;
         }
     }
+}
 
+.articles__img {
+    width: 100%;
+    display: block;
+}
 
+.articles__title {
+    font-size: 16px;
+    line-height: 130%;
+    color: $color-dark;
+    font-weight: 700;
+
+    margin-top: 20px;
+    // width: 90%;
+
+    @media (min-width: $tablet-width) {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+    }
+}
+
+.articles__excerpt {
+    font-size: 14px;
+    color: $color-dark;
+    font-weight: 400;
+
+    margin-top: 12px;
+    // width: 90%;
+
+    @media (min-width: $tablet-width) {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+    }
 }

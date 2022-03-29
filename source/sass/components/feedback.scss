@@ -112,7 +112,6 @@
 
 .feedback__city-choice {
     font-size: 14px;
-    line-height: auto;
     margin-bottom: 8px;
 
     @media(min-width: $tablet-width) {
@@ -138,7 +137,6 @@
     align-items: center;
     cursor: pointer;
     font-size: 14px;
-    line-height: auto;
 
     @media(min-width: $tablet-width) {
         font-size: 20px;

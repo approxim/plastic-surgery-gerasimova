@@ -25,17 +25,21 @@ $(document).ready(function(){
       mobileFirst: true,
       dots: false,
       infinite: false,
+      arrows: true,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
-      centerMode: true,
+      // centerMode: true,
       // variableWidth: true,
+      prevArrow: '<div class="prev"></div>',
+      nextArrow: '<div class="next"></div>',
       responsive: [
         {
           breakpoint: 768,
           settings: {
             slidesToShow: 3,
             centerMode: false,
+            variableWidth: false
           }          
         }
       ]
@@ -48,7 +52,7 @@ $(document).ready(function(){
       slidesToShow: 1,
       slidesToScroll: 1,
       prevArrow: '<div class="prev"></div>',
-      nextArrow: '<div class="next"></div>',
+      nextArrow: '<div class="next"></div>'
     });
 
     // reviews photo
