@@ -218,10 +218,14 @@ h3 {
   font-weight: 600;
   transition: all 0.1s ease;
 }
+@media (min-width: 768px) {
+  .brown-button {
+    font-size: 18px;
+  }
+}
 @media (min-width: 1440px) {
   .brown-button {
     font-size: 20px;
-    line-height: 130%;
   }
 }
 .brown-button:hover {
@@ -241,10 +245,14 @@ h3 {
   line-height: 130%;
   font-weight: 700;
 }
+@media (min-width: 768px) {
+  .lite-button {
+    font-size: 18px;
+  }
+}
 @media (min-width: 1440px) {
   .lite-button {
     font-size: 20px;
-    line-height: 130%;
   }
 }
 
@@ -1075,12 +1083,9 @@ h3 {
   }
 }
 
-.operations__item {
-  display: grid;
-  grid-template-columns: 100%;
-}
 @media (min-width: 1440px) {
   .operations__item {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
   }
@@ -1151,6 +1156,7 @@ h3 {
 @media (min-width: 1440px) {
   .operations__price {
     grid-area: 4/1/5/2;
+    margin-bottom: 0;
   }
 }
 

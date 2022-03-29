@@ -100,7 +100,7 @@
 //     font-size: 0.4rem;
 //     transition: 0.2s all ease;
 // }
-  
+
 .operation__sorter {
     position: absolute;
     top: 1.6rem;
@@ -136,7 +136,7 @@
 //         border: none;
 //         color: $color-white;
 //         padding: 5px 10px;
-        
+
 
 //         @media (min-width: $tablet-width) {
 //             display: none;
@@ -177,7 +177,7 @@
 // }
 
 .operations__wrapper {
-    
+
     @media (min-width: $tablet-width) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -196,14 +196,10 @@
 // }
 
 .operations__item {
-
-    display: grid;
-    grid-template-columns: 100%;
-
     @media (min-width: $desktop-width) {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 16px;
-
     }
 }
 
@@ -269,6 +265,7 @@
 
     @media (min-width: $desktop-width) {
         grid-area: 4 / 1 / 5 / 2;
+        margin-bottom: 0;
     }
 }
 
