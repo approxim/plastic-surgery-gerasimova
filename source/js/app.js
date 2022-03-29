@@ -54,5 +54,40 @@ document.getElementById("tab--krasnoyarsk").click();
 
 
 
+// Кнопка выбора опции (тело-лицо)
+let operationButton = document.querySelector(".operation__select");
+let operationButtonText = document.querySelector(".operation__select-label");
+let operationSorter = document.querySelector(".operation__sorter");
 
+const NODES = ["BUTTON", "LABEL"];
+
+window.addEventListener("click", e => {
+  if (NODES.includes(e.target.nodeName)) return;
+  operationButton.classList.remove("active");
+});
+
+operationButton.addEventListener("click", e => {
+  operationButton.classList.toggle("active");
+});
+
+operationSorter.addEventListener("click", e => {
+  operationButtonText.innerText = e.target.innerText;
+  operationButton.classList.add("selected");
+  operationButton.classList.remove("active");
+});
+
+
+$(document).ready(function(){
+  $(".operation__sorter-item").click(function(){
+    var value = $(this).attr("data-filter");
+    var elem = $(".operations__slide");
+    if(value == "all"){
+      $(elem).show("500");
+    }
+    else{
+      $(elem).not("."+value).hide("500");
+      $(elem).filter("."+value).show("500");
+    }
+  });
+})
 

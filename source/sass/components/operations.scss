@@ -15,6 +15,16 @@
     justify-content: space-between;
     position: relative;
 
+    margin-bottom: 24px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 48px;
+    }
+
     &::after {
         content: '';
         display: block;
@@ -43,64 +53,230 @@
     }
 }
 
-.operation__sorter {
-    color: $color-dark;
 
-    &--mobile {
-        display: block;
-        background-color: $color-brown;
-        border: none;
-        color: $color-white;
-        padding: 5px 10px;
+// Кнопка выбора
+.operation__select {
+    font-family: Inter;
+    position: relative;
+    border: 1px solid $color-dark;
+    height: 1.5rem;
+    width: 6rem;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-dark;
+    background: none;
+    transition: 0.3s all ease;
+    z-index: 300;
+    cursor: pointer;
+}
+
+.operation__select > * {
+    cursor: pointer;
+}
+
+// .operation__select.active .icon {
+//     transform: rotate(180deg);
+// }
+.operation__select.active + .operation__sorter {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.operation__select.selected {
+    color: $color-brown;
+    border-color: $color-brown;
+}
+.operation__select:hover {
+    border-color: $color-brown;
+    color: $color-brown;
+}
+.operation__select .label-text {
+    font-size: 0.6rem;
+}
+// .operation__select .icon {
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 0.4rem;
+//     transition: 0.2s all ease;
+// }
+  
+.operation__sorter {
+    position: absolute;
+    top: 1.6rem;
+    right: 0;
+    z-index: 200;
+    width: 6rem;
+    border: 1px solid $color-dark;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    color: $color-dark;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+            background-color: $color-white;
+}
+.operation__sorter .operation__sorter-item {
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    transition: background, color 0.3s ease;
+}
+.operation__sorter .operation__sorter-item:hover {
+    color: $color-brown;
+    background: $color-white;
+}
+
+// .operation__sorter {
+//     color: $color-dark;
+
+//     &--mobile {
+//         display: block;
+//         background-color: $color-brown;
+//         border: none;
+//         color: $color-white;
+//         padding: 5px 10px;
         
 
-        @media (min-width: $tablet-width) {
-            display: none;
-        }
+//         @media (min-width: $tablet-width) {
+//             display: none;
+//         }
 
-        option {
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 130%;
-        }
+//         option {
+//             font-size: 14px;
+//             font-weight: 300;
+//             line-height: 130%;
+//         }
+//     }
+
+//     &--desktop {
+//         display: none;
+
+//         @media (min-width: $tablet-width) {
+//             display: block;
+
+//         }
+
+//         button {
+//             background-color: transparent;
+//             border: none;
+
+//             &:hover {
+//                 color: $color-brown;
+//             }
+
+//             &.active {
+//                 color: $color-brown;
+//             }
+
+//             @media (min-width: $tablet-width) {
+//                 font-size: 20px;
+//             }
+//         }
+//     }
+// }
+
+.operations__wrapper {
+    
+    @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 
-    &--desktop {
-        display: none;
-
-        @media (min-width: $tablet-width) {
-            display: block;
-
-        }
-
-        button {
-            background-color: transparent;
-            border: none;
-
-            &:hover {
-                color: $color-brown;
-            }
-
-            &.active {
-                color: $color-brown;
-            }
-
-            @media (min-width: $tablet-width) {
-                font-size: 20px;
-            }
-        }
+    @media (min-width: $desktop-width) {
+        gap: 32px;
     }
 }
 
+// .operations__slide {
+//     @media (min-width: $tablet-width) {
+//         margin-bottom: 30px;
+//     }
+// }
+
 .operations__item {
 
-    h3 {
-        font-size: 18px;
-        line-height: 110%;
-        color: $color-dark;
+    display: grid;
+    grid-template-columns: 100%;
+
+    @media (min-width: $desktop-width) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+
+    }
+}
+
+.operations__title {
+    font-size: 18px;
+    line-height: 110%;
+    color: $color-dark;
+
+    align-self: flex-end;
+
+    margin-bottom: 8px;
+    height: 40px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-area: 1 / 1 / 2 / 3;
+        font-size: 32px;
     }
 }
 
 .operations__desc {
+    font-size: 12px;
+    line-height: 110%;
     color: $color-dark;
+
+    margin-bottom: 16px;
+    height: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-area: 2 / 1 / 3 / 3;
+        font-size: 20px;
+    }
 }
+
+.operations__img {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+}
+
+.operations__price {
+    width: 100%;
+    margin-bottom: 8px;
+    white-space: nowrap;
+
+    @media (min-width: $desktop-width) {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+}
+
+.operations__result {
+    width: 100%;
+
+    @media (min-width: $desktop-width) {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+}
+

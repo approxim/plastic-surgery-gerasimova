@@ -6,13 +6,14 @@ $(document).ready(function(){
     // operations
     $(".operations__wrapper").slick({
         mobileFirst: true,
-        dots: true,
-        infinite: true,
+        dots: false,
+        infinite: false,
+        arrows: false,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
         // centerMode: true,
-        variableWidth: true,
+        // variableWidth: true,
         responsive: [
           {
             breakpoint: 768,
@@ -24,13 +25,11 @@ $(document).ready(function(){
     $(".articles__list").slick({    
       mobileFirst: true,
       dots: false,
-      infinite: false,
-      arrows: true,
+      infinite: true,
+      arrows: false,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
-      // centerMode: true,
-      // variableWidth: true,
       prevArrow: '<div class="prev"></div>',
       nextArrow: '<div class="next"></div>',
       responsive: [
@@ -39,7 +38,8 @@ $(document).ready(function(){
           settings: {
             slidesToShow: 3,
             centerMode: false,
-            variableWidth: false
+            variableWidth: false,
+            arrows: true
           }          
         }
       ]
