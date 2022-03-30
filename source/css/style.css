@@ -255,6 +255,12 @@ h3 {
     font-size: 20px;
   }
 }
+.lite-button:hover {
+  filter: brightness(0.9);
+}
+.lite-button:active {
+  filter: brightness(0.8);
+}
 
 .header {
   width: auto;
@@ -337,6 +343,7 @@ h3 {
   line-height: 130%;
   color: #ffffff;
   padding: 10px 10px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .nav-main__link {
@@ -350,7 +357,21 @@ h3 {
     padding: 17px 20px;
   }
 }
-
+.nav-main__link::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 15px;
+  right: 15px;
+  height: 1px;
+  width: auto;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: ease opacity 0.3s;
+}
+.nav-main__link:hover::after {
+  opacity: 1;
+}
 .intro {
   box-sizing: border-box;
   width: 100%;
@@ -611,12 +632,14 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 @media (min-width: 768px) {
   .aboutme__inner {
     flex-direction: row;
+    align-items: flex-end;
     height: 63px;
+    padding: 0 25px 0;
   }
 }
 
@@ -624,14 +647,14 @@ h3 {
   font-size: 14px;
   line-height: 110%;
   color: #273040;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .aboutme__consultation::after {
   content: url("/media/icons/arrow-down.svg");
-  position: absolute;
-  top: 0;
-  right: 0;
   height: 100%;
+  padding-left: 15px;
 }
 @media (min-width: 768px) {
   .aboutme__consultation::after {
@@ -640,8 +663,20 @@ h3 {
   }
 }
 @media (min-width: 768px) {
+  .aboutme__consultation span {
+    width: min-content;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutme__consultation span {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
   .aboutme__consultation {
     font-size: 20px;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 

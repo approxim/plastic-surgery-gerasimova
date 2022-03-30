@@ -18,31 +18,31 @@
             <nav class="nav-main">
                 <ul class="nav-main__list">
                     <li class="nav-main__item">
-                        <a class="nav-main__link" href="#">
+                        <a class="nav-main__link" href="#" data-scroll="#aboutme">
                             <span>О докторе</span>
                         </a>
                     </li>
 
                     <li class="nav-main__item">
-                        <a class="nav-main__link" href="#">
+                        <a class="nav-main__link" href="#" data-scroll="#operations">
                             <span>Операции</span>
                         </a>
                     </li>
 
                     <li class="nav-main__item">
-                        <a class="nav-main__link" href="#">
-                            <span>Квалификация</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-main__item">
-                        <a class="nav-main__link" href="#">
+                        <a class="nav-main__link" href="#" data-scroll="#reviews">
                             <span>Отзывы</span>
                         </a>
                     </li>
 
                     <li class="nav-main__item">
-                        <a class="nav-main__link" href="#">
+                        <a class="nav-main__link" href="#" data-scroll="#stage">
+                            <span>Этапы работы</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-main__item">
+                        <a class="nav-main__link" href="#" data-scroll="#faq">
                             <span>FAQ</span>
                         </a>
                     </li>
@@ -54,7 +54,7 @@
     <main class="main">
         <h1 class="visually-hidden">Пластическая хирургия от профессионала</h1>
         <!-- Главная -->
-        <section class="intro container">
+        <section class="intro container" id="intro">
             <div class="intro__wrapper">
                 <p class="intro__title">Пластическая хирургия от профессионала</p>
 
@@ -70,7 +70,7 @@
         </section>
 
         <!-- О докторе -->
-        <section class="aboutme container">
+        <section class="aboutme container" id="aboutme">
             <h2>миссия</h2>
 
             <div class="aboutme__wrapper">
@@ -79,7 +79,9 @@
                 <blockquote class="aboutme__cite">“Для меня главное, чтобы мой пациент вышел из стен клиники счастливым, гармоничным и уверенным. Приятно видеть, как вы становитесь красивей, сильнее, меняете образ жизни, находите себя и свой путь к счастью”</blockquote>
 
                 <div class="aboutme__inner">
-                    <span class="aboutme__consultation">Бесплатная консультация</span>
+                    <p class="aboutme__consultation">
+                        <span>Бесплатная консультация</span>
+                    </p>
 
                     <button class="aboutme__button brown-button">
                         <span>Записаться</span>
@@ -89,7 +91,7 @@
         </section>
 
         <!-- Принцип работы -->
-        <section class="principle container">
+        <section class="principle container" id="principle">
             <h2>Принцип работы</h2>
 
             <ul class="principle__wrapper">
@@ -143,24 +145,11 @@
         </section>
 
         <!-- Операции -->
-        <section class="operations container">
+        <section class="operations container" id="operations">
             <h2 class="visually-hidden">операции</h2>
             <div class="operations__info">
                 <p>операции</p>
-                <!-- <div class="operation__sorter operation__sorter--desktop">
-                    <button class="active">все</button>
-                    <button>тело</button>
-                    <button>лицо</button>
-                </div>
-                <options class="operation__sorter operation__sorter--mobile" name="operation__sorter[]">
-                    <option value="all" selected>все</option>
-                    <option value="body">тело</option>
-                    <option value="face">лицо</option>
-                </options> -->
-
-
-
-                <button class="operation__select">
+                <button class="operation__select" type="button">
                     <label class="operation__select-label">Все</label>
                 </button>
                 <ul class="operation__sorter">
@@ -168,7 +157,6 @@
                     <li class="operation__sorter-item operation__sorter-item--body" data-filter="body">Тело</li>
                     <li class="operation__sorter-item operation__sorter-item--face" data-filter="face">Лицо</li>
                 </ul>
-
             </div>
 
             <div class="operations__wrapper">                
@@ -178,8 +166,8 @@
                         <p class="operations__desc">операция по изменению формы носа</p>
                         <img class="operations__img" src="media/images/operations-1.jpg" srcset="media/images/operations-1@2x.jpg 2x" alt="изменение формы носа" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -189,8 +177,8 @@
                         <p class="operations__desc">операция по изменению формы век</p>
                         <img class="operations__img" src="media/images/operations-2.jpg" srcset="media/images/operations-2@2x.jpg 2x" alt="изменение формы век" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -200,8 +188,8 @@
                         <p class="operations__desc">восстановление формы лица через пересадку собственного жира</p>
                         <img class="operations__img" src="media/images/operations-3.jpg" srcset="media/images/operations-3@2x.jpg 2x" alt="восстановление формы лица" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -211,8 +199,8 @@
                         <p class="operations__desc">подтяжка кожи вместе с расположенными под ней тканями</p>
                         <img class="operations__img" src="media/images/operations-4.jpg" srcset="media/images/operations-4@2x.jpg 2x" alt="подтяжка кожи" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -222,8 +210,8 @@
                         <p class="operations__desc">исправление формы ушей</p>
                         <img class="operations__img" src="media/images/operations-5.jpg" srcset="media/images/operations-5@2x.jpg 2x" alt="исправление формы ушей" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -233,8 +221,8 @@
                         <p class="operations__desc">операция на груди (редукционная маммопластика - подтяжка, увеличение)</p>
                         <img class="operations__img" src="media/images/operations-6.jpg" srcset="media/images/operations-6@2x.jpg 2x" alt="операция на груди" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -244,8 +232,8 @@
                         <p class="operations__desc">подтяжка живота</p>
                         <img class="operations__img" src="media/images/operations-7.jpg" srcset="media/images/operations-7@2x.jpg 2x" alt="подтяжка живота" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -255,8 +243,8 @@
                         <p class="operations__desc">удаление жировых отложений (подбородка, живот, бока, бедра)</p>
                         <img class="operations__img" src="media/images/operations-8.jpg" srcset="media/images/operations-8@2x.jpg 2x" alt="удаление жировых отложений" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
 
@@ -266,8 +254,8 @@
                         <p class="operations__desc">коррекция формы больших половых и малых половых губ</p>
                         <img class="operations__img" src="media/images/operations-9.jpg" srcset="media/images/operations-9@2x.jpg 2x" alt="коррекция формы половых губ" width="228" height="144">
 
-                        <button class="operations__price brown-button">Смотреть прайс</button>
-                        <button class="operations__result lite-button">Результаты</button>
+                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
                 
@@ -275,7 +263,7 @@
         </section>
 
         <!-- Мои пациенты -->
-        <section class="reviews container">
+        <section class="reviews container" id="reviews">
             <h2>мои пациенты</h2>
 
             <div class="reviews__wrapper">
@@ -314,7 +302,7 @@
         </section>
 
         <!-- О клинике -->
-        <section class="clinic container">
+        <section class="clinic container" id="clinic">
             <h2 class="visually-hidden">о клинике</h2>
             <div class="clinic__control">
                 <p class="clinic__title">о клинике</p>
@@ -368,7 +356,7 @@
         </section>
 
         <!-- Этапы работы -->
-        <section class="stage container">
+        <section class="stage container" id="stage">
             <h2>этапы работы</h2>
 
             <ul class="stage__wrapper container-2">
@@ -393,7 +381,7 @@
         </section>
 
         <!-- FAQ -->
-        <section class="faq container">
+        <section class="faq container" id="faq">
             <h2 class="visually-hidden">FAQ</h2>
 
             <ul class="faq__wrapper">
@@ -460,7 +448,7 @@
         </section>
 
         <!-- Полезные статьи -->
-        <section class="articles container">
+        <section class="articles container" id="articles">
             <h2>Полезные статьи</h2>
             <ul class="articles__list">
                 <li class="articles__item">
@@ -531,7 +519,7 @@
         </section>
 
         <!-- Форма обратной связи -->
-        <section class="feedback container">
+        <section class="feedback container" id="feedback">
             <h2 class="visually-hidden">Запись на бесплатную консультацию</h2>
 
             <form class="feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">

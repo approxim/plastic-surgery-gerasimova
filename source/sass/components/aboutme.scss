@@ -1,7 +1,6 @@
 .aboutme {
     margin-top: 32px;
 
-
     @media (min-width: $tablet-width) {
         margin-top: 80px;
     }    
@@ -11,7 +10,6 @@
     display: grid;
     grid-template-columns: auto minmax(120px, 30%);
     gap: 1rem;
-
     position: relative;
 
     @media (min-width: $tablet-width) {
@@ -47,14 +45,12 @@
 .aboutme__image {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-
     width: 100%;
     
     @media (min-width: $tablet-width) {
         grid-column: 1 / 2;
         grid-row: 1 / 3;
-        padding: 25px 25px 0;
-        
+        padding: 25px 25px 0;        
     }
 
     @media (min-width: $desktop-width) {
@@ -67,11 +63,9 @@
     font-weight: 400;
     line-height: 110%;
     color: $color-dark;
-    padding: 16px 12px 0;
-    
+    padding: 16px 12px 0;    
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-
     position: relative;
 
     @media (min-width: $tablet-width) {
@@ -98,7 +92,6 @@
         height: 35px;
         border: 1px solid $color-dark;
         border-bottom: none;
-
         @media (min-width: $tablet-width) {
             display: none;
         }
@@ -108,15 +101,16 @@
 .aboutme__inner {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     @media (min-width: $tablet-width) {
         flex-direction: row;
+        align-items: flex-end;
         height: 63px;
+        padding: 0 25px 0;
     }
 }
 
@@ -124,24 +118,36 @@
     font-size: 14px;
     line-height: 110%;
     color: $color-dark;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
     &::after {
         content: url("/media/icons/arrow-down.svg");
-        position: absolute;
-        top: 0;
-        right: 0;
         height: 100%;
+
+        padding-left: 15px;
 
         @media (min-width: $tablet-width) {
             content: url("/media/icons/arrow-right.svg");
             right: -40px;
+        }
+    }
 
+    span {
+        @media (min-width: $tablet-width) {
+            width: min-content;
+        }
+
+        @media (min-width: 1024px) {
+            width: auto;
         }
     }
 
     @media (min-width: $tablet-width) {
         font-size: 20px;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
 

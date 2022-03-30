@@ -77,6 +77,9 @@
     
     padding: 10px 10px;
 
+    position: relative;
+    
+
     @media (min-width: $tablet-width) {
         font-size: 16px;
         padding: 10px 15px;
@@ -85,5 +88,26 @@
     @media (min-width: $desktop-width){
         font-size: 20px;
         padding: 17px 20px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 15px;
+        right: 15px;
+        height: 1px;
+        width: auto;
+        background-color: $color-white;
+        opacity: 0;
+        transition: ease opacity 0.3s;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+
+    &:active {
+
     }
 }
