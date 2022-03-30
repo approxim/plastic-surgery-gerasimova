@@ -69,16 +69,19 @@
     // width: 100%;
     // overflow: hidden;
 
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: 
-    "clin-text1"
-    "clin-image"
-    "clin-text2"
-    "clin-address"
-    "clin-button";
+    // display: grid;
+    // grid-template-columns: 100%;
+    // grid-template-areas: 
+    // "clin-text1"
+    // "clin-image"
+    // "clin-text2"
+    // "clin-address"
+    // "clin-button";
 }
 
+.clinic__slider {
+    min-width: 0;
+}
 
 .clinic__images {
     grid-area: clin-image;

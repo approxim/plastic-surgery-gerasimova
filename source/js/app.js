@@ -9,16 +9,26 @@ function openText(textNumber, elmnt) {
 const faqButtons = document.querySelectorAll(".faq__title");
 
 for (i = 0; i < faqButtons.length; i++) {
-    faqButtons[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        let faqPanel = this.nextElementSibling;
-        if (faqPanel.style.display === "block") {
-            faqPanel.style.display = "none";
-        } else {
-            faqPanel.style.display = "block";
-        }
-    });
+  faqButtons[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      let faqPanel = this.nextElementSibling;
+      if (faqPanel.style.display === "block") {
+        faqPanel.style.display = "none";
+      } else {
+        faqPanel.style.display = "block";
+      }
+  });
 }
+
+
+// let navToggle = $("#navToggle");
+// 	navToggle.on("click", function(event) {  /*при клике мышкой по NavToggle будет выполняться функция...*/
+// 		event.preventDefault();                    /*отменяем стандартное поведение ссылки при нажитии мышью*/ 
+
+//     nav.toggleClass("show"); 	/*классу nav добавляем класс show при клике мыши*/             
+// });
+
+
 
 // Маска для набора номера телефона
 $("#feedbacktel").mask("+7(999) 999-9999");

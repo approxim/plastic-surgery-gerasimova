@@ -1,0 +1,15 @@
+.modal-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-feedback__form {
+    position: fixed;
+    z-index: 9998;
+    margin: auto;
+
+    min-width: 280px;
+    max-width: 600px;
+    height: auto;
+}

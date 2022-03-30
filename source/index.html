@@ -316,13 +316,13 @@
 
                 <li class="clinic__inner" id="krasnoyarsk">
                     <div class="clinic__item">
+                        <p class="clinic__text clinic__text--1">Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.</p>
                         <div class="clinic__images">
                             <div class="clinic__slider">
                                 <img class="clinic__image" src="media/images/about-1.jpg" srcset="media/images/about-1@2x.jpg 2x" alt="наша клиника" width="256" height="276">
                                 <img class="clinic__image" src="media/images/med_clinic_sample.jpg" srcset="media/images/med_clinic_sample.jpg 2x" alt="наша клиника" width="256" height="276">
                             </div>
                         </div>
-                        <p class="clinic__text clinic__text--1">Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.</p>
                         <p class="clinic__text clinic__text--2">Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!</p>
                         <address class="clinic__address">
                             <span>Адрес: </span>
@@ -333,15 +333,19 @@
                 </li>
 
                 <li class="clinic__inner" id="abakan">
-                    <div class="clinic__item">
+                    <div class="clinic__item">                        
+                        <p class="clinic__text clinic__text--1">Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!</p>
                         <div class="clinic__images">
                             <div class="clinic__slider">
-                                <img class="clinic__image" src="media/images/med_clinic_sample.jpg" srcset="media/images/med_clinic_sample.jpg 2x" alt="наша клиника" width="256" height="276">
-                                <img class="clinic__image" src="media/images/about-1.jpg" srcset="media/images/about-1@2x.jpg 2x" alt="наша клиника" width="256" height="276">                            
+                                <div>
+                                    <img class="clinic__image" src="media/images/med_clinic_sample.jpg" srcset="media/images/med_clinic_sample.jpg 2x" alt="наша клиника" width="256" height="276">
+                                </div>
+                                <div>
+                                    <img class="clinic__image" src="media/images/about-1.jpg" srcset="media/images/about-1@2x.jpg 2x" alt="наша клиника" width="256" height="276">
+                                </div>
                             </div>
                         </div>
-                        <p class="clinic__text clinic__text--1">Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.</p>
-                        <p class="clinic__text clinic__text--2">Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!</p>
+                        <p class="clinic__text clinic__text--2">Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.</p>
                         <address class="clinic__address">
                             <span>Адрес: </span>
                             <span>Абакан, ул. Советская 33</span>
@@ -350,9 +354,6 @@
                     </div>
                 </li>
             </ul>
-
-
-
         </section>
 
         <!-- Этапы работы -->
@@ -589,8 +590,8 @@
     </footer>
 
     <!-- Модальное окно с формой  -->
-    <div class="modal-form" style="display: none;">
-        <h2 class="modal-form__title">Заявка на консультацию</h2>
+    <div class="modal-form">
+        <!-- <h2 class="modal-form__title">Заявка на консультацию</h2>
         <p class="modal-form__desc">Оставьте свои данные, мы вам перезвоним, чтобы назначить дату и время консультации</p>
 
         <form class="modal-form__form" action="google.com" name="modal-form__form" method="post">
@@ -626,6 +627,47 @@
             </label>
 
             <button class="modal-form__button" type="submit">Отправить</button>
+        </form> -->
+
+
+        <form class="feedback__form modal-feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">
+            <h2 class="modal-form__title">Заявка на консультацию</h2>
+            <p class="modal-form__desc">Оставьте свои данные, мы вам перезвоним, чтобы назначить дату и время консультации</p>
+            <p class="feedback__title">Запишитесь на бесплатную консультацию</p>
+            <div class="feedback__feels">
+                <label class="feedback__name feedback__feel">
+                    <span>Имя</span>
+                    <input type="text" name="name" placeholder="Имя" required>
+                </label>
+
+                <label class="feedback__tel feedback__feel">
+                    <span>Телефон</span>
+                    <input id="feedbacktel" type="text" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
+                </label>
+
+                <label class="feedback__text feedback__feel">
+                    <span>Предмет консультации</span>
+                    <textarea name="text" id="" cols="30" rows="5" placeholder="Текст"></textarea>
+                </label>
+            </div>
+
+            <p class="feedback__city-choice">В каком городе посетите консультацию?</p>
+
+            <div class="feedback__radio">
+                <label class="feedback__city feedback__city--krasnoyarsk">
+                    <input class="visually-hidden" type="radio" name="city" value="krasnoyarsk" checked>
+                    <span class="feedback__mark feedback__mark--krasnoyarsk"></span>
+                    <span class="feedback__label feedback__label--krasnoyarsk">Красноярск</span>
+                </label>
+
+                <label class="feedback__city feedback__city--abakan">
+                    <input class="visually-hidden" type="radio" name="city" value="abakan" checked>
+                    <span class="feedback__mark feedback__mark--abakan"></span>
+                    <span class="feedback__label feedback__label--abakan">Абакан</span>
+                </label>
+
+                <button class="feedback__button brown-button" type="submit">Отправить</button>
+            </div>
         </form>
     </div>
 
