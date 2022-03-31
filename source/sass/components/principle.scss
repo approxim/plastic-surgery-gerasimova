@@ -269,6 +269,17 @@
     }
 }
 
+.principle__more {
+    display: none;
+
+    &.active {
+        display: block;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 100;
+    }
+}
 
 .principle__title {
     font-size: 14px;
@@ -288,4 +299,10 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding: 12px;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+        animation: open-elem 800ms forwards;
+    }
 }

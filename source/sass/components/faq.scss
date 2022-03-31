@@ -109,21 +109,20 @@
         }
     }
 
-    &.active {
-        & + .faq__panel {
-            display: block;
-            overflow: visible;
-        }
-    }
-
     &.active::after {
         transform: translateY(-50%) rotate(90deg);
     }
 }
 
 .faq__panel {
-    display: none;
-    overflow: hidden;
+    opacity: 0;
+    height: 0;
+
+    &.active {
+        animation: open-elem 800ms forwards;
+        opacity: 1;
+        height: auto;
+    }
 }
 
 .faq__description {

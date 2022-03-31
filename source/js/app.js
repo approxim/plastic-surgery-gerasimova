@@ -1,38 +1,17 @@
 // Кнопка Подробнее в секции "Принцип работы"
-function openText(textNumber, elmnt) {
-  document.getElementById(textNumber).style.display = "block";
-  elmnt.style.display = "none";
-}  
-
+$(".principle__more").on("click", function(event) {
+  $(this).toggleClass("active");
+  $(this).siblings('.principle__desc').toggleClass("active"); // siblings - соседний элемент
+})
 
 // Кнопки в FAQ
-const faqButtons = document.querySelectorAll(".faq__title");
-
-for (i = 0; i < faqButtons.length; i++) {
-  faqButtons[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      let faqPanel = this.nextElementSibling;
-      if (faqPanel.style.display === "block") {
-        faqPanel.style.display = "none";
-      } else {
-        faqPanel.style.display = "block";
-      }
-  });
-}
-
-
-// let navToggle = $("#navToggle");
-// 	navToggle.on("click", function(event) {  /*при клике мышкой по NavToggle будет выполняться функция...*/
-// 		event.preventDefault();                    /*отменяем стандартное поведение ссылки при нажитии мышью*/ 
-
-//     nav.toggleClass("show"); 	/*классу nav добавляем класс show при клике мыши*/             
-// });
-
-
+$(".faq__title").on("click", function() {
+  $(this).toggleClass("active");
+  $(this).siblings('.faq__panel').toggleClass("active"); // siblings - соседний элемент
+})
 
 // Маска для набора номера телефона
 $("#feedbacktel").mask("+7(999) 999-9999");
-
 
 
 
@@ -40,7 +19,6 @@ $("#feedbacktel").mask("+7(999) 999-9999");
 function openPage(pageName, elmnt) {
 
   var i, allClinicCityContent, elmnt;
-
   allClinicCityContent = document.getElementsByClassName("clinic__inner");
 
   for (i = 0; i < allClinicCityContent.length; i++) {
@@ -56,7 +34,7 @@ function openPage(pageName, elmnt) {
   }
   // даем класс эктив нажатой кнопке
   elmnt.className += " active";
-}  
+}
 // Делаем активной вкладку "Красноярск"
 document.getElementById("tab--krasnoyarsk").click();
 
@@ -117,5 +95,4 @@ $("[data-scroll]").on("click", function(event) {
   $("html, body").animate({
     scrollTop: blockOffset -30 // отступ
   }, 500);
-
 });

@@ -65,8 +65,7 @@
 }
 
 .footer__social {
-    margin-bottom: 16px;
-    width: 190px;
+    margin-bottom: 16px;   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,4 +73,8 @@
     @media (min-width: $tablet-width) {
         margin: 0;
     }
+}
+
+.footer__icon:not(:last-child) {
+    margin-right: 30px;
 }
