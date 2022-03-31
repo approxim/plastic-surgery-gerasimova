@@ -60,7 +60,7 @@
 
                 <div class="intro__sign-up">
                     <p>ГЕРАСИМОВА АННА ВИКТОРОВНА, пластический хирург с 9-ти летней практикой. Первичная консультация бесплатно</p>
-                    <button class="brown-button">
+                    <button class="brown-button to-appointment">
                         <span>Записаться на прием</span>
                     </button>
 
@@ -83,9 +83,9 @@
                         <span>Бесплатная консультация</span>
                     </p>
 
-                    <button class="aboutme__button brown-button">
+                    <button class="aboutme__button brown-button to-appointment" id="aboutme__button" type="button">
                         <span>Записаться</span>
-                    </button>
+                    </button>                    
                 </div>
             </div>
         </section>
@@ -97,7 +97,7 @@
             <ul class="principle__wrapper">
                 <li class="principle__inner principle__inner--1">
                     <h3 class="principle__title">Свободное владение лучшими практиками пластической хирургии</h3>
-                    <button class="principle__more active" id="principle__more-1" type="button" onclick="openText('principle__desc-1', this)">
+                    <button class="principle__more active" id="principle__more-1" type="button">
                         <span>Подробнее</span>
                     </button>
                     <p class="principle__desc" id="principle__desc-1">Опыт и широкий спектр профессиональных знаний позволяют мне  быстро осваивать самые эффективные современные методики эстетической медицины, улучшая и модифицируя их на благо своих пациентов</p>
@@ -110,7 +110,7 @@
 
                 <li class="principle__inner principle__inner--3">
                     <h3 class="principle__title">Беспрерывный процесс обучения новым методикам</h3>
-                    <button class="principle__more active" id="principle__more-3" type="button" onclick="openText('principle__desc-3', this)">
+                    <button class="principle__more active" id="principle__more-3" type="button">
                         <span>Подробнее</span>
                     </button>
                     <p class="principle__desc" id="principle__desc-3">Опыт и широкий спектр профессиональных знаний позволяют мне  быстро осваивать самые эффективные современные методики эстетической медицины, улучшая и модифицируя их на благо своих пациентов</p>
@@ -123,7 +123,7 @@
 
                 <li class="principle__inner principle__inner--5">
                     <h3 class="principle__title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                    <button class="principle__more active" id="principle__more-5" type="button" onclick="openText('principle__desc-5', this)">
+                    <button class="principle__more active" id="principle__more-5" type="button">
                         <span>Подробнее</span>
                     </button>
                     <p class="principle__desc" id="principle__desc-5">Neque, quae debitis odit repudiandae expedita impedit voluptatibus reprehenderit nesciunt beatae, minima eligendi. Dicta mollitia debitis voluptatibus consequatur, omnis dolorem! Iusto, id?</p>
@@ -136,7 +136,7 @@
 
                 <li class="principle__inner principle__inner--7">
                     <h3 class="principle__title">Dicta mollitia debitis voluptatibus consequatur, omnis dolorem! Iusto, id</h3>
-                    <button class="principle__more active"  id="principle__more-7" type="button" onclick="openText('principle__desc-7', this)">
+                    <button class="principle__more active"  id="principle__more-7" type="button">
                         <span>Подробнее</span>
                     </button>
                     <p class="principle__desc" id="principle__desc-7">Опыт и широкий спектр профессиональных знаний позволяют мне  быстро осваивать самые эффективные современные методики эстетической медицины, улучшая и модифицируя их на благо своих пациентов</p>
@@ -328,7 +328,7 @@
                             <span>Адрес: </span>
                             <span>Красноярск, ул. Парам-Парам, 15</span>
                         </address>
-                        <button class="clinic__button brown-button">Записаться на прием</button>
+                        <button class="clinic__button brown-button to-appointment">Записаться на прием</button>
                     </div>
                 </li>
 
@@ -350,7 +350,7 @@
                             <span>Адрес: </span>
                             <span>Абакан, ул. Советская 33</span>
                         </address>
-                        <button class="clinic__button brown-button">Записаться на прием</button>
+                        <button class="clinic__button brown-button to-appointment">Записаться на прием</button>
                     </div>
                 </li>
             </ul>
@@ -590,50 +590,13 @@
     </footer>
 
     <!-- Модальное окно с формой  -->
-    <div class="modal-form">
-        <!-- <h2 class="modal-form__title">Заявка на консультацию</h2>
-        <p class="modal-form__desc">Оставьте свои данные, мы вам перезвоним, чтобы назначить дату и время консультации</p>
+    <div class="modal-form" id="modal__form">
+        <form class="feedback__form modal-feedback__form" id="modal-feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">
+            <button class="modal-form__close" id="modal-form__close" type="button"></button>
+            <p class="feedback__title modal">Заявка на консультацию</p>
 
-        <form class="modal-form__form" action="google.com" name="modal-form__form" method="post">
-
-            <label class="modal-form__name">
-                <span>Имя</span>
-                <input type="text" name="name" placeholder="Имя" required>
-            </label>
-
-            <label class="modal-form__tel">
-                <span>Телефон</span>
-                <input type="tel" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
-            </label>
-
-            <label class="modal-form__text">
-                <span>Предмет консультации</span>
-                <textarea name="text" id="" cols="30" rows="10" placeholder="Текст"></textarea>
-            </label>
-
-
-            <p class="modal-form__city-choice">В каком городе посетите консультацию?</p>
-
-            <label class="modal-form__city modal-form__city--krasnoyarsk">
-                <input type="radio" name="city" value="krasnoyarsk" checked>
-                <span class="modal-form__mark modal-form__mark--krasnoyarsk"></span>
-                <span class="modal-form__label modal-form__label--krasnoyarsk">Красноярск</span>
-            </label>
-
-            <label class="modal-form_city modal-form__city--abakan">
-                <input type="radio" name="city" value="abakan" checked>
-                <span class="modal-form__mark modal-form__mark--abakan"></span>
-                <span class="modal-form__label modal-form__label--abakan">Абакан</span>
-            </label>
-
-            <button class="modal-form__button" type="submit">Отправить</button>
-        </form> -->
-
-
-        <form class="feedback__form modal-feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">
-            <h2 class="modal-form__title">Заявка на консультацию</h2>
             <p class="modal-form__desc">Оставьте свои данные, мы вам перезвоним, чтобы назначить дату и время консультации</p>
-            <p class="feedback__title">Запишитесь на бесплатную консультацию</p>
+
             <div class="feedback__feels">
                 <label class="feedback__name feedback__feel">
                     <span>Имя</span>
@@ -642,18 +605,18 @@
 
                 <label class="feedback__tel feedback__feel">
                     <span>Телефон</span>
-                    <input id="feedbacktel" type="text" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
+                    <input id="feedbacktel-modal" type="text" name="tel" placeholder="+7 (XXX) XXX XX XX" required>
                 </label>
 
                 <label class="feedback__text feedback__feel">
                     <span>Предмет консультации</span>
-                    <textarea name="text" id="" cols="30" rows="5" placeholder="Текст"></textarea>
+                    <textarea name="text" cols="30" rows="5" placeholder="Текст"></textarea>
                 </label>
             </div>
 
             <p class="feedback__city-choice">В каком городе посетите консультацию?</p>
 
-            <div class="feedback__radio">
+            <div class="feedback__radio modal-feedback__radio">
                 <label class="feedback__city feedback__city--krasnoyarsk">
                     <input class="visually-hidden" type="radio" name="city" value="krasnoyarsk" checked>
                     <span class="feedback__mark feedback__mark--krasnoyarsk"></span>
@@ -670,8 +633,6 @@
             </div>
         </form>
     </div>
-
-    <!-- Модальное окно -->
 
     <script src="js/jquery-v3.6.0.js"></script>
     <script src="js/slick.min.js"></script>

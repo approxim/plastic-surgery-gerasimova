@@ -12,31 +12,7 @@ $(".faq__title").on("click", function() {
 
 // Маска для набора номера телефона
 $("#feedbacktel").mask("+7(999) 999-9999");
-
-
-
-// // Табы в секции clinic (кнопки абакан-красноярск)
-// function openPage(pageName, elmnt) {
-
-//   var i, allClinicCityContent, elmnt;
-//   allClinicCityContent = document.getElementsByClassName("clinic__inner");
-
-//   for (i = 0; i < allClinicCityContent.length; i++) {
-//     allClinicCityContent[i].style.display = "none";
-//   }
-
-//   document.getElementById(pageName).style.display = "block";
-
-//   //Получаем все кнопки и удаляем класс "Эктив"
-//   let allClinicCityButtons = document.getElementsByClassName("clinic__tab");
-//   for (i = 0; i < allClinicCityButtons.length; i++) {
-//     allClinicCityButtons[i].className = allClinicCityButtons[i].className.replace(" active", "");
-//   }
-//   // даем класс эктив нажатой кнопке
-//   elmnt.className += " active";
-// }
-// // Делаем активной вкладку "Красноярск"
-// document.getElementById("tab--krasnoyarsk").click();
+$("#feedbacktel-modal").mask("+7(999) 999-9999");
 
 
 // Табы в секции clinic (кнопки абакан-красноярск)
@@ -88,7 +64,6 @@ operationSorter.addEventListener("click", e => {
   operationButton.classList.remove("active");
 });
 
-
 $(document).ready(function(){
   $(".operation__sorter-item").click(function(){
     var value = $(this).attr("data-filter");
@@ -120,3 +95,47 @@ $("[data-scroll]").on("click", function(event) {
     scrollTop: blockOffset -30 // отступ
   }, 500);
 });
+
+
+// Запуск модалки "Запись на консультацию"
+$(".to-appointment").on("click", function () {
+  $("#modal__form").show('fast');//показывает див модалки
+
+  // Закрытие модалки "Запись на консультацию"
+  $(document).mouseup( function(e){ // событие клика по веб-документу
+      var modalForm = $("#modal-feedback__form"); // сама форма
+      var modalWindow = $('#modal__form'); // окно, в которой находится форма
+
+      $("#modal-form__close").on("click", function () {
+        $("#modal__form").hide('fast');//скрывает див модалки при клике на кнопку закрытия
+      });
+
+      if ( !modalForm.is(e.target) // если клик был не по нашему блоку
+          && modalForm.has(e.target).length === 0 ) { // и не по его дочерним элементам
+          modalWindow.hide('fast'); // скрываем его          
+      }
+  });
+});
+
+
+// Модальное окно "Запись на консультацию"
+function modalForm() {
+  
+  // //действия при нажатии на кнопку Отправить
+  // $(".send").click(function () {
+  //     //Считываем данные с полей формы
+  //     var name = $("input#name:text").val(); 
+  //     var phone = $("input#phone:text").val();
+      
+  //     //если они не пустые
+  //     if(name !=="" && phone !==""){
+  //         var text = "Ваше имя: " +name + "\n" +"Ваш телефон: "+phone;//строка с значениями из формы
+  //         alert("Заказ отправлен\n"+text);//выводим информацию о успешном хаказе
+  //         $(".modal").hide('fast');//закрываем модалку
+  //     }else{
+  //         alert("ВОУ! ВОУ! АЛАРМ! ЗАПОЛНИ ВСЕ ПОЛЯ!");//если поля формы пустые, выводи сообщение
+  //     }
+      
+  // });
+}
+
