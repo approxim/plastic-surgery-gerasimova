@@ -78,9 +78,9 @@ $(document).ready(function(){
   });
 
   // реинициализация слайдера при клике на табы (выбор города)
-  $(".clinic__tab").on('click', function (e) {
-    $(".clinic__slider").slick('reinit');
-  });
+  // $(".clinic__tab").on('click', function (e) {
+  //   $(".clinic__slider").slick('reinit');
+  // });
 })
 
 // Одинаковая высота слайдов в slick slider

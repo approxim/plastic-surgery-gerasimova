@@ -15,6 +15,30 @@ $("#feedbacktel").mask("+7(999) 999-9999");
 
 
 
+// // Табы в секции clinic (кнопки абакан-красноярск)
+// function openPage(pageName, elmnt) {
+
+//   var i, allClinicCityContent, elmnt;
+//   allClinicCityContent = document.getElementsByClassName("clinic__inner");
+
+//   for (i = 0; i < allClinicCityContent.length; i++) {
+//     allClinicCityContent[i].style.display = "none";
+//   }
+
+//   document.getElementById(pageName).style.display = "block";
+
+//   //Получаем все кнопки и удаляем класс "Эктив"
+//   let allClinicCityButtons = document.getElementsByClassName("clinic__tab");
+//   for (i = 0; i < allClinicCityButtons.length; i++) {
+//     allClinicCityButtons[i].className = allClinicCityButtons[i].className.replace(" active", "");
+//   }
+//   // даем класс эктив нажатой кнопке
+//   elmnt.className += " active";
+// }
+// // Делаем активной вкладку "Красноярск"
+// document.getElementById("tab--krasnoyarsk").click();
+
+
 // Табы в секции clinic (кнопки абакан-красноярск)
 function openPage(pageName, elmnt) {
 
@@ -22,10 +46,12 @@ function openPage(pageName, elmnt) {
   allClinicCityContent = document.getElementsByClassName("clinic__inner");
 
   for (i = 0; i < allClinicCityContent.length; i++) {
-    allClinicCityContent[i].style.display = "none";
+    allClinicCityContent[i].style.visibility = "hidden";
+    allClinicCityContent[i].style.height = "0";
   }
 
-  document.getElementById(pageName).style.display = "block";
+  document.getElementById(pageName).style.visibility = "visible";
+  document.getElementById(pageName).style.height = "auto";
 
   //Получаем все кнопки и удаляем класс "Эктив"
   let allClinicCityButtons = document.getElementsByClassName("clinic__tab");
@@ -37,8 +63,6 @@ function openPage(pageName, elmnt) {
 }
 // Делаем активной вкладку "Красноярск"
 document.getElementById("tab--krasnoyarsk").click();
-
-
 
 
 
