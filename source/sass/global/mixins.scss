@@ -1,41 +1,26 @@
-// @mixin form_text {
-//   font-family: $font-primary;
-//   font-size: 16px;
-//   line-height: 18px;
-//   text-transform: uppercase;
-//   color: $color-special-dark-grey;
+@mixin modal-window {
+    display: none;
+    background-color: transparentize($color-dark, .5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9997;
+}
 
-//   @media (min-width: $tablet-width) {
-//     font-size: 20px;
-//   }
-// }
+@mixin modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    margin: auto;
 
-// @mixin form_input {
-//   width: 100%;
-//   height: 46px;
-//   padding: 0 15px;
-//   border: 1px solid $color-special-grey-3;
-//   box-sizing: border-box;
+    height: auto;
 
-//   @media (min-width: $tablet-width) {
-//     height: 50px;
-//     padding: 0 19px;
-//   }
-// }
-
-
-// @mixin gray-line {
-//   position: relative;
-
-//   &::after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     bottom: -41px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     width: 100vw;
-//     height: 1px;
-//     background-color: $color-special-grey;
-//   }
-// }
+    background-color: $color-white;
+    box-shadow: 5px 5px 10px transparentize($color-dark, .8);
+}

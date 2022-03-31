@@ -26,5 +26,7 @@
 // @import "./slick/slick-class.scss";
 
 
-// Modal window
+// Modal windows
+@import "./modal-window/modal-global.scss";
 @import "./modal-window/modal-form.scss";
+@import "./modal-window/modal-article.scss";

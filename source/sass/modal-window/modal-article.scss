@@ -1,0 +1,7 @@
+.modal-article {
+    @include modal-window;
+}
+
+.modal-article__content {
+    @include modal-content;
+}

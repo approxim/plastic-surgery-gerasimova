@@ -453,7 +453,7 @@
             <h2>Полезные статьи</h2>
             <ul class="articles__list">
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">7 советов как облегчить реабилитацию</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -461,7 +461,7 @@
                 </li>
 
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-2.jpg" srcset="media/images/userful-articles-2@2x.jpg 2x" alt="Мифы о пластической хирургии" width="229" height="204">
                         <h3 class="articles__title">Мифы о пластической хирургии</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -469,7 +469,7 @@
                 </li>
 
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-3.jpg" srcset="media/images/userful-articles-3@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">7 советов как облегчить реабилитацию</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -477,7 +477,7 @@
                 </li>
 
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">4й заголовок</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -485,7 +485,7 @@
                 </li>
 
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">7 советов как облегчить реабилитацию</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -493,7 +493,7 @@
                 </li>
 
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-2.jpg" srcset="media/images/userful-articles-2@2x.jpg 2x" alt="Мифы о пластической хирургии" width="229" height="204">
                         <h3 class="articles__title">Мифы о пластической хирургии</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -501,7 +501,7 @@
                 </li>
 
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-3.jpg" srcset="media/images/userful-articles-3@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">7 советов как облегчить реабилитацию</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -509,7 +509,7 @@
                 </li>
 
                 <li class="articles__item">
-                    <a href="#" target="_blank">
+                    <a class="articles__link" href="#">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">4й заголовок</h3>
                         <p class="articles__excerpt">Краткое описание статьи, чтобы понять интересно или нет</p>
@@ -592,7 +592,7 @@
     <!-- Модальное окно с формой  -->
     <div class="modal-form" id="modal__form">
         <form class="feedback__form modal-feedback__form" id="modal-feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">
-            <button class="modal-form__close" id="modal-form__close" type="button"></button>
+            <button class="modal__close" id="modal-form__close" type="button"></button>
             <p class="feedback__title modal">Заявка на консультацию</p>
 
             <p class="modal-form__desc">Оставьте свои данные, мы вам перезвоним, чтобы назначить дату и время консультации</p>
@@ -632,6 +632,14 @@
                 <button class="feedback__button brown-button" type="submit">Отправить</button>
             </div>
         </form>
+    </div>
+
+    <!-- Модальное окно со статьями -->
+    <div class="modal-article" id="modal-article">
+        <div class="modal-article__content">
+            <button class="modal__close" id="modal-article__close" type="button"></button>
+
+        </div>
     </div>
 
     <script src="js/jquery-v3.6.0.js"></script>

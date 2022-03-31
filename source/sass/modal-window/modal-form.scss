@@ -1,31 +1,13 @@
 .modal-form {
-    display: none;
-    background-color: transparentize($color-dark, .5);
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 9997;
+    @include modal-window;
 }
 
 .modal-feedback__form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    right: 25px;
-    z-index: 9998;
-    margin: auto;
+
+    @include modal-content;
 
     min-width: 280px;
     max-width: 600px;
-    height: auto;
-
-    background-color: $color-white;
-    box-shadow: 5px 5px 10px transparentize($color-dark, .8);
 
     @media(min-width: $desktop-width) {
         padding: 40px;
@@ -82,32 +64,6 @@
     }
 }
 
-.modal-form__close {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-
-    background-color: transparent;
-    border: none;
-    padding: 20px;
-
-    &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 1px;
-        background-color: $color-dark;
-    }
-
-    &::before {
-        transform: rotate(45deg);
-    }
-
-    &::after {
-        transform: rotate(-45deg);
-    }    
-}
-
 .feedback__title.modal {
     margin-bottom: 8px;
     @media (min-width: $tablet-width) {
@@ -128,5 +84,3 @@
         width: 100%;
     }
 }
-
-

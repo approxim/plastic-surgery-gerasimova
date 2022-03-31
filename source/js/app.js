@@ -97,6 +97,7 @@ $("[data-scroll]").on("click", function(event) {
 });
 
 
+
 // Запуск модалки "Запись на консультацию"
 $(".to-appointment").on("click", function () {
   $("#modal__form").show('fast');//показывает див модалки
@@ -111,8 +112,8 @@ $(".to-appointment").on("click", function () {
       });
 
       if ( !modalForm.is(e.target) // если клик был не по нашему блоку
-          && modalForm.has(e.target).length === 0 ) { // и не по его дочерним элементам
-          modalWindow.hide('fast'); // скрываем его          
+        && modalForm.has(e.target).length === 0 ) { // и не по его дочерним элементам
+        modalWindow.hide('fast'); // скрываем его
       }
   });
 });

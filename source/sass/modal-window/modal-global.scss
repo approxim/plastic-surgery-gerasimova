@@ -1,0 +1,25 @@
+.modal__close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background-color: $color-dark;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
