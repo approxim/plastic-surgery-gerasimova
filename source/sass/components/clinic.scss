@@ -33,7 +33,7 @@
     margin-bottom: 8px;
   
     @media (min-width: $tablet-width) {
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 20px;
     }
 }
@@ -56,7 +56,7 @@
     }
 
     &.active {
-        color: $color-brown;        
+        color: $color-brown;
     }
 
     &:hover {
@@ -64,19 +64,40 @@
     }
 }
 
-.clinic__item {
-    // max-width: 0;
-    // width: 100%;
-    // overflow: hidden;
 
-    // display: grid;
-    // grid-template-columns: 100%;
-    // grid-template-areas: 
-    // "clin-text1"
-    // "clin-image"
-    // "clin-text2"
-    // "clin-address"
-    // "clin-button";
+
+
+
+
+.clinic__item {
+    min-width: 0;
+    // max-width: 0;
+    width: 100%;
+    // height: auto;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "clin-text1"
+    "clin-image"
+    "clin-text2"
+    "clin-address"
+    "clin-button";
+
+    @media (min-width: $tablet-width) {
+        grid-template-columns: 45% 55%; 
+        column-gap: 40px;
+        grid-template-areas:
+        "clin-text1 clin-image"        
+        "clin-text2 clin-image"
+        "clin-address clin-image"
+        "clin-button clin-image";
+    }
+
+    // @media (min-width: $desktop-width) {
+
+    // }
 }
 
 .clinic__slider {
@@ -88,6 +109,22 @@
 
     padding: 0 12px 0;
     margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+        padding: 0;
+    }
+
+    div {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.clinic__image {
+    // height: 564px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .clinic__text {
@@ -120,5 +157,13 @@
 
     @media (min-width: $tablet-width) {
         display: block;
+        justify-self: flex-start;
+        align-self: flex-end;
+    }
+}
+
+.clinic .slick-dotted.slick-slider {
+    @media (min-width: $tablet-width) {
+        margin-bottom: 0;
     }
 }

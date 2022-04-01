@@ -1,3 +1,30 @@
+// Точки слайдера
+.slick-dots {
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparentize($color-white, .5);
+    border-radius: 4px;
+}
+
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dots li button {
+    width: 8px;
+    height: 8px;
+    background-color: $color-brown;
+    border-radius: 50%;
+}
+
+.slick-dots li button::before {
+    display: none;
+}
+
+
+
+
 // Кастомные стрелки
 .slick-slider .slick-arrow{
     position: absolute;
@@ -37,6 +64,10 @@
 
 .operations .operations__slide {
     padding-right: 10px;
+
+    @media (min-width: $tablet-width) {
+        padding-right: 0;
+    }
 }
 
 
@@ -69,32 +100,34 @@
 
 // Clinic
 
-.clinic .slick-arrow {
-    transform: translateY(0);
-}
+// .clinic .slick-arrow {
+//     transform: translateY(0);
+// }
 
-.clinic .slick-arrow.prev{
-    left: -25px; // левая стрелка остается с левой стороны слайдера
-    background: url('../../media/icons/arrow-slider-left.svg') center / cover no-repeat;
+// .clinic .slick-arrow.prev{
+//     left: -25px; // левая стрелка остается с левой стороны слайдера
+//     background: url('../../media/icons/arrow-slider-left.svg') center / cover no-repeat;
 
-    @media (min-width: $tablet-width) {
-        left: -10px;
-    }
-}
+//     @media (min-width: $tablet-width) {
+//         left: -10px;
+//     }
+// }
 
-.clinic .slick-arrow.next{
-    right: -25px; // правая стрелка переместилась справа от слайдера
-    background: url('../../media/icons/arrow-slider-right.svg') center / cover no-repeat;
+// .clinic .slick-arrow.next{
+//     right: -25px; // правая стрелка переместилась справа от слайдера
+//     background: url('../../media/icons/arrow-slider-right.svg') center / cover no-repeat;
 
-    @media (min-width: $tablet-width) {
-        right: -10px;
-    }
-}
+//     @media (min-width: $tablet-width) {
+//         right: -10px;
+//     }
+// }
 
 .clinic__slider .slick-track {
     max-width: 100vw;
 }
+.slick-slide-control80, .slick-slide-control81 {
 
+}
 
 
 // Article

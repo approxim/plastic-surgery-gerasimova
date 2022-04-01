@@ -118,6 +118,27 @@ $(".to-appointment").on("click", function () {
   });
 });
 
+// // Запуск модалки "Полезные статьи"
+// $(".to-appointment").on("click", function () {
+//   $("#modal__form").show('fast');//показывает див модалки
+
+//   // Закрытие модалки "Запись на консультацию"
+//   $(document).mouseup( function(e){ // событие клика по веб-документу
+//       var modalForm = $("#modal-feedback__form"); // сама форма
+//       var modalWindow = $('#modal__form'); // окно, в которой находится форма
+
+//       $("#modal-form__close").on("click", function () {
+//         $("#modal__form").hide('fast');//скрывает див модалки при клике на кнопку закрытия
+//       });
+
+//       if ( !modalForm.is(e.target) // если клик был не по нашему блоку
+//         && modalForm.has(e.target).length === 0 ) { // и не по его дочерним элементам
+//         modalWindow.hide('fast'); // скрываем его
+//       }
+//   });
+// });
+
+
 
 // Модальное окно "Запись на консультацию"
 // function modalForm() {

@@ -66,13 +66,14 @@ $(document).ready(function(){
 
 
   // clinic
-  $('.clinic__slider').slick({
+  $('.clinic__images').slick({
     infinite: true,
-    dots: false,
+    dots: true,
+    arrows: false,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: '<div class="prev"></div>',
-    nextArrow: '<div class="next"></div>'
+    slidesToScroll: 1
+    // prevArrow: '<div class="prev"></div>',
+    // nextArrow: '<div class="next"></div>'
   });
 
   // реинициализация слайдера при клике на табы (выбор города)

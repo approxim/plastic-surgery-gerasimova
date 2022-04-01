@@ -37,7 +37,7 @@
             left: 45%;
             background-color: $color-dark;
             width: 1px;
-            height: 150px;
+            height: 193px;
         }
     }
 }
@@ -108,9 +108,9 @@
 
     @media (min-width: $tablet-width) {
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         height: 63px;
-        padding: 0 25px 0;
+        padding: 0 70px 0 40px;
     }
 }
 
@@ -121,6 +121,17 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+
+    @media (min-width: $tablet-width) {
+        font-size: 20px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+    }
 
     &::after {
         content: url("/media/icons/arrow-down.svg");
@@ -143,12 +154,6 @@
             width: auto;
         }
     }
-
-    @media (min-width: $tablet-width) {
-        font-size: 20px;
-        justify-content: flex-start;
-        align-items: center;
-    }
 }
 
 .aboutme__button {
@@ -157,8 +162,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
 
     @media (min-width: $tablet-width) {
         width: auto;
+        font-size: 19px;
+        padding: 12px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+        padding: 16px 24px;
     }
 }
