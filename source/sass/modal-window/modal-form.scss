@@ -1,5 +1,6 @@
 .modal-form {
     @include modal-window;
+    display: none;
 }
 
 .modal-feedback__form {
@@ -49,7 +50,7 @@
             grid-column: 2 / 3;
         }
     }
-    
+
     .feedback__text {
         @media(min-width: $tablet-width) {
             grid-column: 1 / 2;

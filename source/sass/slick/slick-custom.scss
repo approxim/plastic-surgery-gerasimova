@@ -104,43 +104,54 @@
 
     @media (min-width: $tablet-width) {
         padding: 0 !important;
-        margin: 0 10px 0;
-    }
-}
-
-.articles .prev {
-    display: none !important;
-
-    @media (min-width: $tablet-width) {
-        display: block !important;
-    }
-}
-
-// Увеличиваем область кнопки и убираем стрелку
-.articles .next {
-    height: 100%;
-    width: 27%;
-    background: none !important;
-
-    @media (min-width: $tablet-width) {
-        height: 40px;
-        width: 30px;
-        background: url('../../media/icons/arrow-slider-right.svg') center / cover no-repeat !important;
     }
 }
 
 .articles .slick-slide {
-    padding: 0 10px 0;
+    padding: 0 15px;
 
-        @media (min-width: $tablet-width) {
-        padding: 0 15px 0;
-        overflow: hidden;
-    }
-
-    &:first-child {
-        padding-left: 0;
+    @media (min-width: $tablet-width) {
+        padding: 0 20px;
     }
 }
+
+// .articles .prev {
+//     display: none !important;
+
+//     @media (min-width: $tablet-width) {
+//         display: block !important;
+//     }
+// }
+
+// // Увеличиваем область кнопки и убираем стрелку
+// .articles .next {
+//     height: 100%;
+//     width: 27%;
+//     background: none !important;
+
+//     @media (min-width: $tablet-width) {
+//         height: 40px;
+//         width: 30px;
+//         background: url('../../media/icons/arrow-slider-right.svg') center / cover no-repeat !important;
+//     }
+// }
+
+// .articles .slick-slide {
+//     padding: 0 10px 0;
+
+//         @media (min-width: $tablet-width) {
+//         padding: 0 15px 0;
+//         overflow: hidden;
+//     }
+
+//     &:first-child {
+//         padding-left: 0;
+//     }
+// }
+
+
+
+
 
 // .articles .slick-slide:nth-of-type(-n+3) {
 //     padding-right: 15px;

@@ -48,21 +48,3 @@
         font-size: 24px;
     }
 }
-
-.articles__excerpt {
-    font-size: 14px;
-    color: $color-dark;
-    font-weight: 400;
-
-    margin-top: 12px;
-    // width: 90%;
-
-    @media (min-width: $tablet-width) {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    @media (min-width: $desktop-width) {
-        font-size: 20px;
-    }
-}

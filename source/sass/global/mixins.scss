@@ -1,26 +1,28 @@
 @mixin modal-window {
-    display: none;
-    background-color: transparentize($color-dark, .5);
+    // display: none;
     position: fixed;
-    width: 100vw;
-    height: 100vh;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     z-index: 9997;
+
+    background-color: transparentize($color-dark, .5);
+    width: 100vw;
+    height: 100vh;
 }
 
 @mixin modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 9998;
-    margin: auto;
 
-    height: auto;
+    transform: translate(-50%, -50%);
 
     background-color: $color-white;
     box-shadow: 5px 5px 10px transparentize($color-dark, .8);
+
+    height: auto;
+    margin: auto;
 }

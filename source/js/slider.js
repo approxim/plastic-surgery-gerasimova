@@ -1,6 +1,3 @@
-// $(".slick-track").css("max-width", $(window).width());
-
-
 // sliders
 $(document).ready(function(){
   // operations
@@ -32,14 +29,15 @@ $(document).ready(function(){
     slidesToScroll: 1,
     prevArrow: '<div class="prev"></div>',
     nextArrow: '<div class="next"></div>',
+    adaptiveHeight: false,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
-          centerMode: false,
-          variableWidth: false,
-          arrows: true
+          arrows: true,
+          centerMode: true,
+          // focusOnSelect: true
         }          
       }
     ]
@@ -90,8 +88,3 @@ $('.reviews__wrapper').on('setPosition', function () {
   var slickTrackHeight = $(slickTrack).height();
   $(this).find('.reviews__item').css('height', slickTrackHeight + 'px');
 });	
-
-
-
-
-

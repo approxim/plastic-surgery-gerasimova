@@ -120,7 +120,7 @@ $(".to-appointment").on("click", function () {
 
 
 // Модальное окно "Запись на консультацию"
-function modalForm() {
+// function modalForm() {
   
   // //действия при нажатии на кнопку Отправить
   // $(".send").click(function () {
@@ -138,5 +138,5 @@ function modalForm() {
   //     }
       
   // });
-}
+// }
 
