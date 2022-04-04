@@ -1,8 +1,5 @@
 .modal-article {
-    display: none;
     @include modal-window;
-
-    overflow-y: auto;
 }
 
 .modal-article__content {

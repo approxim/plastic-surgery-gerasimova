@@ -1993,6 +1993,11 @@ h3 {
   height: 1px;
 }
 
+.articles__button {
+  background-color: transparent;
+  border: none;
+}
+
 .articles__img {
   width: 100%;
   display: block;
@@ -2855,7 +2860,6 @@ h3 {
 }
 
 .modal-article {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -2868,7 +2872,6 @@ h3 {
   align-items: center;
   overflow: scroll;
   display: none;
-  overflow-y: auto;
 }
 
 .modal-article__content {

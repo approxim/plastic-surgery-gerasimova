@@ -36,7 +36,7 @@ $(document).ready(function(){
         settings: {
           slidesToShow: 3,
           arrows: true,
-          centerMode: true,
+          // centerMode: true,
           // focusOnSelect: true
         }
       }
@@ -79,7 +79,6 @@ $(document).ready(function(){
         breakpoint: 768,
         settings: {
           arrows: true,
-          // centerMode: true,
           prevArrow: '<div class="prev"></div>',
           nextArrow: '<div class="next"></div>'
         }
