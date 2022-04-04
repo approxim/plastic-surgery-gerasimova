@@ -165,29 +165,58 @@ $(".to-appointment").on("click", function () {
 
 
 // Открытие модального окна статьи по клику
-function openArticle(evt, tabId) {
+function openArticle(evt, modalArticleId) {
   // evt.preventDefault();
   // Открываем модальное окно с соответствующим айдишником
-  document.getElementById(tabId).style.display = "block";
+  // document.getElementById(modalArticleId).style.display = "flex";
+  document.getElementById(modalArticleId).className += " active";
+
+
+  // let articleModals = document.getElementsByClassName("modal-article");
+  // for (i = 0; i < articleModals.length; i++) {
+  //   articleModals[i].className = articleModals[i].className.replace(" active", "");
+  // }
 }
 
-// $(".to-appointment").on("click", function () {
-//   $("#modal__form").css("display", "flex").hide().fadeIn('fast'); //плавно присваивает FLEX
+// Закрыть документ по клику
 
-//   // Закрытие модалки "Запись на консультацию"
-//   $(document).mouseup( function(e){ // событие клика по веб-документу
-//       var modalForm = $("#modal-feedback__form"); // сама форма
-//       var modalWindow = $('#modal__form'); // окно, в которой находится форма
 
-//       $("#modal-form__close").on("click", function () {
-//         $("#modal__form").hide('fast');//скрывает див модалки при клике на кнопку закрытия
-//       });
 
-//       if ( !modalForm.is(e.target) // если клик был не по нашему блоку
-//         && modalForm.has(e.target).length === 0 ) { // и не по его дочерним элементам
-//         modalWindow.hide('fast'); // скрываем его
-//       }
+// Табы "Событий"
+// function openDate(evt, tabId) {
+
+//   // Получаем массив элементов евентс_табконтент и скрываем их
+//   let tabcontent = document.getElementsByClassName("events__tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//       tabcontent[i].style.display = "none";
+//   }
+//   // Получаем все элементы евентс__таблинкс и удаляем класс "Эктив"
+//   let tablinks = document.getElementsByClassName("events__tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//       tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+//   // Показываем текущую вкладку и добавляем класс Эктив кнопке, открывшей класс
+//   document.getElementById(tabId).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
+
+
+
+
+
+
+// $(document).mouseup( function(e){ // событие клика по веб-документу
+//   var modalArticle = $(".modal-article"); // сама форма
+//   var modalWindow = $('.modal-article__content'); // окно, в которой находится форма
+
+//   $(".modal__close").on("click", function () {
+//     $(".modal-article__content").hide('fast');//скрывает див модалки при клике на кнопку закрытия
 //   });
+
+//   if ( !modalArticle.is(e.target) // если клик был не по нашему блоку
+//     && modalArticle.has(e.target).length === 0 ) { // и не по его дочерним элементам
+//     modalWindow.hide('fast'); // скрываем его
+//   }
 // });
 
-// $(".to-appointment")
+

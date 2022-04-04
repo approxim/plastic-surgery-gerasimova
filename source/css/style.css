@@ -1996,6 +1996,7 @@ h3 {
 .articles__button {
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
 .articles__img {
@@ -2663,6 +2664,15 @@ h3 {
   padding-right: 50px;
 }
 
+.operations .slick-slide {
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .operations .slick-slide {
+    padding: 0 20px;
+  }
+}
+
 .operations .operations__slide {
   padding-right: 10px;
 }
@@ -2872,6 +2882,9 @@ h3 {
   align-items: center;
   overflow: scroll;
   display: none;
+}
+.modal-article.active {
+  display: flex;
 }
 
 .modal-article__content {
