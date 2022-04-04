@@ -38,7 +38,7 @@ $(document).ready(function(){
           arrows: true,
           centerMode: true,
           // focusOnSelect: true
-        }          
+        }
       }
     ]
   });
@@ -67,13 +67,24 @@ $(document).ready(function(){
 
   // clinic
   $('.clinic__images').slick({
+    mobileFirst: true,
     infinite: true,
     dots: true,
     arrows: false,
     slidesToShow: 1,
-    slidesToScroll: 1
-    // prevArrow: '<div class="prev"></div>',
-    // nextArrow: '<div class="next"></div>'
+    slidesToScroll: 1,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          // centerMode: true,
+          prevArrow: '<div class="prev"></div>',
+          nextArrow: '<div class="next"></div>'
+        }
+      }
+    ]
   });
 
   // реинициализация слайдера при клике на табы (выбор города)
