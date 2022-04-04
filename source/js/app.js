@@ -100,7 +100,8 @@ $("[data-scroll]").on("click", function(event) {
 
 // Запуск модалки "Запись на консультацию"
 $(".to-appointment").on("click", function () {
-  $("#modal__form").show('fast');//показывает див модалки
+  // $("#modal__form").show('fast');//показывает див модалки
+  $("#modal__form").css("display", "flex").hide().fadeIn('fast'); //плавно присваивает FLEX
 
   // Закрытие модалки "Запись на консультацию"
   $(document).mouseup( function(e){ // событие клика по веб-документу
@@ -160,4 +161,3 @@ $(".to-appointment").on("click", function () {
       
   // });
 // }
-

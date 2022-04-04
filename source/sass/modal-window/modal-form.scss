@@ -1,10 +1,8 @@
 .modal-form {
     @include modal-window;
-    display: none;
 }
 
 .modal-feedback__form {
-
     @include modal-content;
 
     min-width: 280px;
@@ -41,7 +39,7 @@
             grid-column: 1 / 2;
         }
     }
-    
+
     .feedback__tel {
         @media(min-width: $tablet-width) {
             grid-column: 1 / 2;

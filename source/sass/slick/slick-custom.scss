@@ -122,6 +122,9 @@
 
 .clinic .slick-slider .slick-arrow.prev {
     left: 0;
+    @media (min-width: $desktop-width) {
+        left: 33px;
+    }
 }
 
 .clinic .slick-slider .slick-arrow.next {
@@ -129,7 +132,9 @@
 }
 
 .clinic .slick-dots {
-    transform: translateX(-15%);
+    @media (min-width: $tablet-width) {
+        transform: translateX(-15%);
+    }
 }
 
 // Article
