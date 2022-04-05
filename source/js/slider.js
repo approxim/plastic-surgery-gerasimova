@@ -4,13 +4,13 @@ $(document).ready(function(){
   $(".operations__wrapper").slick({
       mobileFirst: true,
       dots: false,
-      infinite: false,
+      infinite: true,
       arrows: false,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
       // centerMode: true,
-      // variableWidth: true,
+      variableWidth: true,
       responsive: [
         {
           breakpoint: 768,

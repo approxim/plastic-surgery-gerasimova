@@ -1,0 +1,11 @@
+.modal-price {
+    @include modal-window;
+    display: flex;
+}
+
+.modal-price__content {
+    @include modal-content;
+
+    display: flex;
+    flex-direction: column;    
+}

@@ -3001,4 +3001,30 @@ h3 {
     height: 14px;
   }
 }
+
+.modal-price {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  background-color: rgba(39, 48, 64, 0.5);
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: scroll;
+  display: none;
+  display: flex;
+}
+
+.modal-price__content {
+  margin: auto 20px auto;
+  height: auto;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(39, 48, 64, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 /*# sourceMappingURL=style.css.map */
