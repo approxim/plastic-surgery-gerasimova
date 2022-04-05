@@ -64,44 +64,36 @@ operationSorter.addEventListener("click", e => {
   operationButton.classList.remove("active");
 });
 
-$(document).ready(function(){
-  $(".operation__sorter-item").click(function(){
-    var value = $(this).attr("data-filter");
-    var elem = $(".operations__slide");
-    if(value == "all"){
-      $(elem).show("500");
-    }
-    else{
-      $(elem).not("."+value).hide("500");
-      $(elem).filter("."+value).show("500");
-    }
+$(document).ready(function () {
+  $('.operation__sorter-item').on('click', function () {
+      var value = $(this).attr("data-filter");
+
+      if (window.innerWidth > 767) {
+          var value = $(this).attr("data-filter");
+          var elem = $(".operations__slide");
+          if (value == "all") {
+              $(elem).show("500");
+          } else {
+              $(elem).not("." + value).hide("500");
+              $(elem).filter("." + value).show("500");
+          }
+      } else {
+          if (value === 'all') {
+              $('.operations__wrapper').slick('slickUnfilter');
+              $('.operations__wrapper').slick('slickFilter', '.all');
+
+          } else {
+              if (value === 'body') {
+                  $('.operations__wrapper').slick('slickUnfilter');
+                  $('.operations__wrapper').slick('slickFilter', '.body');
+              } else {
+                  $('.operations__wrapper').slick('slickUnfilter');
+                  $('.operations__wrapper').slick('slickFilter', '.face');
+              }
+          }
+      }
   });
 })
-
-// $(document).ready(function () {
-//   $('.operation__sorter-item').on('click', function () {
-//       var value = $(this).attr("data-filter");
-//       var elem = $(".operations__slide");
-//       // if (value == "all") {
-//       //     $(elem).show("500");
-//       // } else {
-//       //     $(elem).not("." + value).hide("500");
-//       //     $(elem).filter("." + value).show("500");
-//       // }
-//       if (value === 'all') {
-//           $('.operations__wrapper').slick('slickUnfilter');
-//           $('.operations__wrapper').slick('slickFilter', '.all');
-//       } else {
-//           if (value === 'body') {
-//               $('.operations__wrapper').slick('slickUnfilter');
-//               $('.operations__wrapper').slick('slickFilter', '.body');
-//           } else {
-//               $('.operations__wrapper').slick('slickUnfilter');
-//               $('.operations__wrapper').slick('slickFilter', '.face');
-//           }
-//       }
-//   });
-// })
 
 
 // Плавная прокрутка до элемента

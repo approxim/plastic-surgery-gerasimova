@@ -1,5 +1,6 @@
 .modal-form {
     @include modal-window;
+    z-index: 1000000;
 }
 
 .modal-feedback__form {

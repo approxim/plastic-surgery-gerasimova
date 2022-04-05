@@ -608,7 +608,7 @@
     <!-- Модальное окно с формой  -->
     <div class="modal-form" id="modal__form">
         <form class="feedback__form modal-feedback__form" id="modal-feedback__form" action="https://echo.htmlacademy.ru/" name="feedback__form" method="post">
-            <button class="modal__close" type="button"></button>
+            <button class="modal__close" id="modal-form__close" type="button"></button>
             <p class="feedback__title modal">Заявка на консультацию</p>
 
             <p class="modal-form__desc">Оставьте свои данные, мы вам перезвоним, чтобы назначить дату и время консультации</p>
@@ -699,20 +699,20 @@
             <button class="modal__close" id="modal-price__close" type="button"></button>
 
             <div class="modal-price__operation">
-                <p class="modal-price__operation-title">Риносептопластика и ринопластика</p>
+                <p class="modal-price__operation-title modal-price__title">Риносептопластика и ринопластика</p>
                 <p class="modal-price__operation-desc">операция по изменению формы носа</p>
 
-                <div class="modal-price__operation-first">
-                    <p class="modal-price__operation-name">Ринопластика первичная</p>
-                    <p class="modal-price__operation-cost">
+                <div class="modal-price__operation-first modal-price__item">
+                    <p class="modal-price__operation-name modal-price__name">Ринопластика первичная</p>
+                    <p class="modal-price__operation-cost modal-price__cost">
                         <span>220 000</span>
                         <span>руб.</span>
                     </p>
                 </div>
 
-                <div class="modal-price__operation-second">
-                    <p class="modal-price__operation-name">Ринопластика вторичная</p>
-                    <p class="modal-price__operation-cost">
+                <div class="modal-price__operation-second modal-price__item">
+                    <p class="modal-price__operation-name modal-price__name">Ринопластика вторичная</p>
+                    <p class="modal-price__operation-cost modal-price__cost">
                         <span>280 000</span>
                         <span>руб.</span>
                     </p>
@@ -720,21 +720,25 @@
             </div>
 
             <div class="modal-price__anesthesia">
-                <p class="modal-price__anesthesia-title">Анестезия</p>
+                <p class="modal-price__anesthesia-title modal-price__title">Анестезия</p>
 
-                <div class="modal-price__anesthesia-item">
-                    <p class="modal-price__anesthesia-name">Общий комбинированный наркоз</p>
-                    <p class="modal-price__anesthesia-desc">Пациент находится в глубоком сне и не чувствует никаких внешних раздражителей и боли</p>
-                    <p class="modal-price__anesthesia-cost">
+                <div class="modal-price__anesthesia-item modal-price__item">
+                    <div>
+                        <p class="modal-price__anesthesia-name modal-price__name">Общий комбинированный наркоз</p>
+                        <p class="modal-price__anesthesia-desc">Пациент находится в глубоком сне и не чувствует никаких внешних раздражителей и боли</p>
+                    </div>
+                    <p class="modal-price__anesthesia-cost modal-price__cost">
                         <span>15 000</span>
                         <span>руб.</span>
                     </p>
                 </div>
 
-                <div class="modal-price__anesthesia-item">
-                    <p class="modal-price__anesthesia-name">Седация</p>
-                    <p class="modal-price__anesthesia-desc">Пациент находится в сознании в состоянии лёгкой дремоты и приглушеной болевой чувствительности</p>
-                    <p class="modal-price__anesthesia-cost">
+                <div class="modal-price__anesthesia-item modal-price__item">                    
+                    <div>
+                        <p class="modal-price__anesthesia-name modal-price__name">Седация</p>
+                        <p class="modal-price__anesthesia-desc">Пациент находится в сознании в состоянии лёгкой дремоты и приглушеной болевой чувствительности</p>
+                    </div>
+                    <p class="modal-price__anesthesia-cost modal-price__cost">
                         <span>6 000</span>
                         <span>руб.</span>
                     </p>
