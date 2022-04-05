@@ -1174,6 +1174,7 @@ h3 {
   .operations__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
     column-gap: 32px;
     row-gap: 70px;
   }
@@ -1193,13 +1194,23 @@ h3 {
   }
 }
 
+.operations__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+@media (min-width: 1440px) {
+  .operations__text {
+    grid-area: 1/1/2/3;
+  }
+}
+
 .operations__title {
   font-size: 18px;
   line-height: 110%;
   color: #273040;
-  align-self: flex-end;
   margin-bottom: 8px;
-  height: 40px;
 }
 @media (min-width: 768px) {
   .operations__title {
@@ -1209,7 +1220,6 @@ h3 {
 }
 @media (min-width: 1440px) {
   .operations__title {
-    grid-area: 1/1/2/3;
     font-size: 32px;
   }
 }
@@ -1219,17 +1229,16 @@ h3 {
   line-height: 110%;
   color: #273040;
   margin-bottom: 16px;
-  height: 30px;
 }
 @media (min-width: 768px) {
   .operations__desc {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-size: 16px;
   }
 }
 @media (min-width: 1440px) {
   .operations__desc {
-    grid-area: 2/1/3/3;
+    margin-bottom: 24px;
     font-size: 20px;
   }
 }
@@ -1246,7 +1255,7 @@ h3 {
 }
 @media (min-width: 1440px) {
   .operations__img {
-    grid-area: 3/1/4/3;
+    grid-area: 2/1/3/3;
   }
 }
 
@@ -1257,7 +1266,7 @@ h3 {
 }
 @media (min-width: 1440px) {
   .operations__price {
-    grid-area: 4/1/5/2;
+    grid-area: 3/1/4/2;
     margin-bottom: 0;
   }
 }
@@ -1267,7 +1276,7 @@ h3 {
 }
 @media (min-width: 1440px) {
   .operations__result {
-    grid-area: 4/2/5/3;
+    grid-area: 3/2/4/3;
   }
 }
 
@@ -2662,6 +2671,10 @@ h3 {
 
 .operations .slick-list {
   padding-right: 50px;
+}
+
+.operations .slick-track {
+  align-items: flex-end;
 }
 
 .operations .slick-slide {

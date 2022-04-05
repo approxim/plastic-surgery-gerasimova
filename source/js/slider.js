@@ -19,6 +19,7 @@ $(document).ready(function(){
       ]
   });
 
+  // Статьи
   $(".articles__list").slick({    
     mobileFirst: true,
     dots: false,
@@ -47,6 +48,7 @@ $(document).ready(function(){
   $('.reviews__wrapper').slick({
     infinite: true,
     dots: false,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: '<div class="prev"></div>',

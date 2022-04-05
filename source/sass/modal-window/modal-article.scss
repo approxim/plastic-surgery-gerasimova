@@ -4,7 +4,7 @@
     &.active {
         display: flex;
     }
-}
+}   
 
 .modal-article__content {
     @include modal-content;
