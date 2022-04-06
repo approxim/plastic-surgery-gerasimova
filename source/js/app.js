@@ -162,7 +162,7 @@ $(".to-appointment").on("click", function () {
 });
 
 // Открытие модального окна статьи по клику
-function openArticle(evt, modalArticleId, articleItemId) {
+function openWindow(evt, modalArticleId, articleItemId) {
     var flag = 0
     var element = document.getElementById(articleItemId)
 

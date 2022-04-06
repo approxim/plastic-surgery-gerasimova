@@ -167,7 +167,7 @@
                         </div>
                         <img class="operations__img" src="media/images/operations-1.jpg" srcset="media/images/operations-1@2x.jpg 2x" alt="изменение формы носа" width="228" height="144">
 
-                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__price brown-button" type="button" onmousedown="openWindow(event, 'modal-price_1', 'price__item_1')" id="price__item_1">Смотреть прайс</button>
                         <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                         </div>
                         <img class="operations__img" src="media/images/operations-2.jpg" srcset="media/images/operations-2@2x.jpg 2x" alt="изменение формы век" width="228" height="144">
 
-                        <button class="operations__price brown-button" type="button">Смотреть прайс</button>
+                        <button class="operations__price brown-button" type="button" onmousedown="openWindow(event, 'modal-price_2', 'price__item_2')" id="price__item_2">Смотреть прайс</button>
                         <button class="operations__result lite-button" type="button">Результаты</button>
                     </div>
                 </div>
@@ -289,18 +289,13 @@
                         <p class="reviews__title">Ринопластика</p>                        
                         <div class="reviews__image">
                             <div class="reviews__image-slider">
-                                <div>
-                                    <img src="media/images/before-after-1.jpg" srcset="media/images/before-after-1@2x.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
-                                <div>
-                                    <img src="media/images/photo_4.jpg" srcset="media/images/photo_4.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
-                                <div>
-                                    <img src="media/images/photo_5.jpg" srcset="media/images/photo_5.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
-                                <div>
-                                    <img src="media/images/photo_6.jpg" srcset="media/images/photo_6.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
+                                <img src="media/images/before-after-1.jpg" srcset="media/images/before-after-1@2x.jpg 2x" alt="до/после ринопластики" width="256" height="173">
+
+                                <img src="media/images/photo_4.jpg" srcset="media/images/photo_4.jpg 2x" alt="до/после ринопластики" width="256" height="173">
+
+                                <img src="media/images/photo_5.jpg" srcset="media/images/photo_5.jpg 2x" alt="до/после ринопластики" width="256" height="173">
+
+                                <img src="media/images/photo_6.jpg" srcset="media/images/photo_6.jpg 2x" alt="до/после ринопластики" width="256" height="173">
                             </div>
                         </div>
                         <p class="reviews__text">“С самого детства я комплексовала по поводу своего носа картошкой. Спасибо огромное Анне Викторовне за ее труд и профессионализм. За то, что избавила меня от jdhfgdfkghkdfhgdhfgkjdhfghdfoidsg  hg gdf ghd fgh dfgd f моего комплекса! Теперь у меня другое отношение к жизни и к себе. <br><br>И отдельное спасибо вашей команде!”</p>
@@ -311,18 +306,13 @@
                         <p class="reviews__title">Липофилинг</p>                        
                         <div class="reviews__image">
                             <div class="reviews__image-slider">
-                                <div>
-                                    <img src="media/images/before-after-2.jpg" srcset="media/images/before-after-2.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
-                                <div>
-                                    <img src="media/images/photo_1.jpg" srcset="media/images/photo_1.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
-                                <div>
-                                    <img src="media/images/photo_2.jpg" srcset="media/images/photo_2.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
-                                <div>
-                                    <img src="media/images/photo_3.jpg" srcset="media/images/photo_3.jpg 2x" alt="до/после ринопластики" width="256" height="173">
-                                </div>
+                                <img src="media/images/photo_7.jpg" srcset="media/images/photo_7.jpg 2x" alt="до/после ринопластики" width="256" height="173">
+
+                                <img src="media/images/photo_1.jpg" srcset="media/images/photo_1.jpg 2x" alt="до/после ринопластики" width="256" height="173">
+
+                                <img src="media/images/photo_2.jpg" srcset="media/images/photo_2.jpg 2x" alt="до/после ринопластики" width="256" height="173">
+
+                                <img src="media/images/photo_3.jpg" srcset="media/images/photo_3.jpg 2x" alt="до/после ринопластики" width="256" height="173">
                             </div>
                         </div>
                         <p class="reviews__text">“Выходя из метро Бауманская, где у входа назначена встреча с экскурсоводом, если внимательно оглядеться вокруг, сразу можно заметить множество интересных деталей, <br><br>напоминающих об историческом прошлом этого места.”</p>
@@ -521,56 +511,56 @@
         <section class="articles container" id="articles">
             <h2>Полезные статьи</h2>
             <ul class="articles__list">
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_1', 'article__item_1')" id="article__item_1">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_1', 'article__item_1')" id="article__item_1">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">1-я статья</h3>
                     </button>
                 </li>
 
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_2', 'article__item_2')" id="article__item_2">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_2', 'article__item_2')" id="article__item_2">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-2.jpg" srcset="media/images/userful-articles-2@2x.jpg 2x" alt="Мифы о пластической хирургии" width="229" height="204">
                         <h3 class="articles__title">2-я статья</h3>
                     </button>
                 </li>
 
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_3', 'article__item_3')" id="article__item_3">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_3', 'article__item_3')" id="article__item_3">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-3.jpg" srcset="media/images/userful-articles-3@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">7 советов как облегчить реабилитацию</h3>
                     </button>
                 </li>
 
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_4', 'article__item_4')" id="article__item_4">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_4', 'article__item_4')" id="article__item_4">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">4й заголовок</h3>
                     </button>
                 </li>
 
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_5', 'article__item_5')" id="article__item_5">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_5', 'article__item_5')" id="article__item_5">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">7 советов как облегчить реабилитацию</h3>
                     </button>
                 </li>
 
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_6', 'article__item_6')" id="article__item_6">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_6', 'article__item_6')" id="article__item_6">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-2.jpg" srcset="media/images/userful-articles-2@2x.jpg 2x" alt="Мифы о пластической хирургии" width="229" height="204">
                         <h3 class="articles__title">Мифы о пластической хирургии</h3>
                     </button>
                 </li>
 
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_7', 'article__item_7')" id="article__item_7">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_7', 'article__item_7')" id="article__item_7">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-3.jpg" srcset="media/images/userful-articles-3@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">7 советов как облегчить реабилитацию</h3>
                     </button>
                 </li>
 
-                <li class="articles__item" onmousedown="openArticle(event, 'modal-article_8', 'article__item_8')" id="article__item_8">
+                <li class="articles__item" onmousedown="openWindow(event, 'modal-article_8', 'article__item_8')" id="article__item_8">
                     <button class="articles__button">
                         <img class="articles__img" src="media/images/userful-articles-1.jpg" srcset="media/images/userful-articles-1@2x.jpg 2x" alt="как облегчить реабилитацию" width="229" height="204">
                         <h3 class="articles__title">4й заголовок</h3>
@@ -738,9 +728,9 @@
 
 
     <!-- Модальное окно прайса -->
-    <div class="modal-price">
-        <div class="modal-price__content">
-            <button class="modal__close" type="button"></button>
+    <div class="modal-price" id="modal-price_1" onclick="closeWindow(event, 'modal-price_1', 'modal-price-1__close')">
+        <div class="modal-price__content" id="modal-price-form-1">
+            <button class="modal__close" type="button" id="modal-price-1__close"></button>
 
             <div class="modal-price__operation">
                 <p class="modal-price__operation-title modal-price__title">Риносептопластика и ринопластика</p>
@@ -795,12 +785,12 @@
             </button>
         </div>
     </div>
-    <div class="modal-price">
-        <div class="modal-price__content">
-            <button class="modal__close" type="button"></button>
+    <div class="modal-price" id="modal-price_2" onclick="closeWindow(event, 'modal-price_2', 'modal-price-2__close')">
+        <div class="modal-price__content" id="modal-price-form-2">
+            <button class="modal__close" type="button" id="modal-price-2__close"></button>
 
             <div class="modal-price__operation">
-                <p class="modal-price__operation-title modal-price__title">Риносептопластика и ринопластика</p>
+                <p class="modal-price__operation-title modal-price__title">Блефаропластика</p>
                 <p class="modal-price__operation-desc">операция по изменению формы носа</p>
 
                 <div class="modal-price__operation-first modal-price__item">

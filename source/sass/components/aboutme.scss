@@ -110,7 +110,11 @@
         flex-direction: row;
         align-items: center;
         height: 63px;
-        padding: 0 70px 0 40px;
+        padding: 0 25px 0 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 0 40px 0 40px;
     }
 }
 
