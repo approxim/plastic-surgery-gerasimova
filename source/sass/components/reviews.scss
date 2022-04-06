@@ -40,9 +40,9 @@
     background-color: $color-dark;
 
     display: grid;
+    grid-template-columns: 100%;
     grid-template-areas:
     "reviews-title"
-
     "reviews-image"
     "reviews-text";
 
@@ -50,8 +50,8 @@
     margin-bottom: 50px;
 
     @media (min-width: $tablet-width) {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: auto auto;
+        // grid-template-columns: 55% 45%;
+        grid-template-columns: 55% auto;
         grid-template-areas:
         "reviews-image reviews-title"
         "reviews-image reviews-text";

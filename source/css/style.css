@@ -1347,14 +1347,14 @@ h3 {
   height: auto !important;
   background-color: #273040;
   display: grid;
+  grid-template-columns: 100%;
   grid-template-areas: "reviews-title" "reviews-image" "reviews-text";
   padding-bottom: 20px;
   margin-bottom: 50px;
 }
 @media (min-width: 768px) {
   .reviews__item {
-    grid-template-columns: 55% 45%;
-    grid-template-rows: auto auto;
+    grid-template-columns: 55% auto;
     grid-template-areas: "reviews-image reviews-title" "reviews-image reviews-text";
     padding-bottom: 0;
   }
