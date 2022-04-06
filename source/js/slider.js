@@ -23,7 +23,7 @@ $(document).ready(function(){
   $(".articles__list").slick({    
     mobileFirst: true,
     dots: false,
-    infinite: true,
+    infinite: false,
     arrows: false,
     speed: 300,
     slidesToShow: 1,
