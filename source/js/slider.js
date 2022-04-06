@@ -2,25 +2,26 @@
 $(document).ready(function(){
   // operations
   $(".operations__wrapper").slick({
-      mobileFirst: true,
-      dots: false,
-      infinite: true,
-      arrows: false,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      // centerMode: true,
-      // variableWidth: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: "unslick"
-        }
-      ]
+    // lazyLoad: 'ondemand',
+    mobileFirst: true,
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // centerMode: true,
+    // variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
   });
 
   // Статьи
-  $(".articles__list").slick({    
+  $(".articles__list").slick({
     mobileFirst: true,
     dots: false,
     infinite: false,
@@ -88,11 +89,7 @@ $(document).ready(function(){
     ]
   });
 
-  // реинициализация слайдера при клике на табы (выбор города)
-  // $(".clinic__tab").on('click', function (e) {
-  //   $(".clinic__slider").slick('reinit');
-  // });
-
+  // Исправление ошибки, при которой нажатие на слайд было при пролистывании
   $('.reviews__image-slider').on("mousedown mouseup", function (event) {
     event.stopPropagation();
   })
@@ -107,4 +104,4 @@ $('.reviews__wrapper').on('setPosition', function () {
   var slickTrack = $(this).find('.slick-track');
   var slickTrackHeight = $(slickTrack).height();
   $(this).find('.reviews__item').css('height', slickTrackHeight + 'px');
-});	
+});
