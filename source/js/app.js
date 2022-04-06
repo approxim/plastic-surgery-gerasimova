@@ -1,0 +1,242 @@
+// Кнопка Подробнее в секции "Принцип работы"
+$(".principle__more").on("click", function (event) {
+    $(this).toggleClass("active");
+    $(this).siblings('.principle__desc').toggleClass("active"); // siblings - соседний элемент
+})
+
+// Кнопки в FAQ
+$(".faq__title").on("click", function () {
+    $(this).toggleClass("active");
+    $(this).siblings('.faq__panel').toggleClass("active"); // siblings - соседний элемент
+})
+
+// Маска для набора номера телефона
+$("#feedbacktel").mask("+7(999) 999-9999");
+$("#feedbacktel-modal").mask("+7(999) 999-9999");
+
+
+// Табы в секции clinic (кнопки абакан-красноярск)
+function openPage(pageName, elmnt) {
+
+    var i, allClinicCityContent, elmnt;
+    allClinicCityContent = document.getElementsByClassName("clinic__inner");
+
+    for (i = 0; i < allClinicCityContent.length; i++) {
+        allClinicCityContent[i].style.visibility = "hidden";
+        allClinicCityContent[i].style.height = "0";
+    }
+
+    document.getElementById(pageName).style.visibility = "visible";
+    document.getElementById(pageName).style.height = "auto";
+
+    //Получаем все кнопки и удаляем класс "Эктив"
+    let allClinicCityButtons = document.getElementsByClassName("clinic__tab");
+    for (i = 0; i < allClinicCityButtons.length; i++) {
+        allClinicCityButtons[i].className = allClinicCityButtons[i].className.replace(" active", "");
+    }
+    // даем класс эктив нажатой кнопке
+    elmnt.className += " active";
+}
+
+// Делаем активной вкладку "Красноярск"
+document.querySelector(".clinic__tab").click();
+
+
+// Кнопка выбора опции (тело-лицо)
+let operationButton = document.querySelector(".operation__select");
+let operationButtonText = document.querySelector(".operation__select-label");
+let operationSorter = document.querySelector(".operation__sorter");
+
+const NODES = ["BUTTON", "LABEL"];
+
+window.addEventListener("click", e => {
+    if (NODES.includes(e.target.nodeName)) return;
+    operationButton.classList.remove("active");
+});
+
+operationButton.addEventListener("click", e => {
+    operationButton.classList.toggle("active");
+});
+
+operationSorter.addEventListener("click", e => {
+    operationButtonText.innerText = e.target.innerText;
+    operationButton.classList.add("selected");
+    operationButton.classList.remove("active");
+});
+
+
+$(document).ready(function () {
+    $('.operation__sorter-item').on('click', function () {
+        var value = $(this).attr("data-filter");
+
+        if (window.innerWidth > 767) {
+            var value = $(this).attr("data-filter");
+            var elem = $(".operations__slide");
+            if (value == "all") {
+                $(elem).show("500");
+            } else {
+                $(elem).not("." + value).hide("500");
+                $(elem).filter("." + value).show("500");
+            }
+        } else {
+            if (value === 'all') {
+                $('.operations__wrapper').slick('slickUnfilter');
+                $('.operations__wrapper').slick('slickFilter', '.all');
+
+            } else {
+                if (value === 'body') {
+                    $('.operations__wrapper').slick('slickUnfilter');
+                    $('.operations__wrapper').slick('slickFilter', '.body');
+                } else {
+                    $('.operations__wrapper').slick('slickUnfilter');
+                    $('.operations__wrapper').slick('slickFilter', '.face');
+                }
+            }
+        }
+    });
+})
+
+
+// Плавная прокрутка до элемента
+$("[data-scroll]").on("click", function (event) {
+    event.preventDefault();
+
+    var $this = $(this),
+        blockId = $this.data('scroll'),
+        blockOffset = $(blockId).offset().top;
+
+    $("#nav a").removeClass("active");
+    $this.addClass("active");
+
+
+    $("html, body").animate({
+        scrollTop: blockOffset - 30 // отступ
+    }, 500);
+});
+
+
+// Запуск модалки "Запись на консультацию"
+$(".to-appointment").on("click", function () {
+    $("#modal__form").css("display", "flex").hide().fadeIn('fast'); //плавно присваивает FLEX
+
+    // Закрытие модалки "Запись на консультацию"
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        var modalForm = $("#modal-feedback__form"); // сама форма
+        var modalWindow = $('#modal__form'); // окно, в которой находится форма
+
+        $("#modal-form__close").on("click", function () {
+            $("#modal__form").hide('fast');//скрывает див модалки при клике на кнопку закрытия
+        });
+
+        if (!modalForm.is(e.target) // если клик был не по нашему блоку
+            && modalForm.has(e.target).length === 0) { // и не по его дочерним элементам
+            modalWindow.hide('fast'); // скрываем его
+        }
+    });
+});
+
+
+// // Запуск модалки "Полезные статьи"
+// $(".to-appointment").on("click", function () {
+//   $("#modal__form").show('fast');//показывает див модалки
+
+//   // Закрытие модалки "Запись на консультацию"
+//   $(document).mouseup( function(e){ // событие клика по веб-документу
+//       var modalForm = $("#modal-feedback__form"); // сама форма
+//       var modalWindow = $('#modal__form'); // окно, в которой находится форма
+
+//       $("#modal-form__close").on("click", function () {
+//         $("#modal__form").hide('fast');//скрывает див модалки при клике на кнопку закрытия
+//       });
+
+//       if ( !modalForm.is(e.target) // если клик был не по нашему блоку
+//         && modalForm.has(e.target).length === 0 ) { // и не по его дочерним элементам
+//         modalWindow.hide('fast'); // скрываем его
+//       }
+//   });
+// });
+
+
+// Модальное окно "Запись на консультацию"
+// function modalForm() {
+
+// //действия при нажатии на кнопку Отправить
+// $(".send").click(function () {
+//     //Считываем данные с полей формы
+//     var name = $("input#name:text").val();
+//     var phone = $("input#phone:text").val();
+
+//     //если они не пустые
+//     if(name !=="" && phone !==""){
+//         var text = "Ваше имя: " +name + "\n" +"Ваш телефон: "+phone;//строка с значениями из формы
+//         alert("Заказ отправлен\n"+text);//выводим информацию о успешном хаказе
+//         $(".modal").hide('fast');//закрываем модалку
+//     }else{
+//         alert("ВОУ! ВОУ! АЛАРМ! ЗАПОЛНИ ВСЕ ПОЛЯ!");//если поля формы пустые, выводи сообщение
+//     }
+
+// });
+// }
+
+function closeWindow(event, formID, closeButtonID) {
+    var modalForm = $("#" + formID); // сама форма
+    var closeButton = $('#' + closeButtonID)
+    if (closeButton.is(event.target)) {
+        document.getElementById(formID).classList.remove('active')
+    }
+    if (modalForm.is(event.target)) { // если клик был не по нашему блоку
+        document.getElementById(formID).classList.remove('active')
+    }
+}
+
+// Открытие модального окна статьи по клику
+function openArticle(evt, modalArticleId) {
+    // evt.preventDefault();
+    // Открываем модальное окно с соответствующим айдишником
+    // document.getElementById(modalArticleId).style.display = "flex";
+    document.getElementById(modalArticleId).className += " active";
+
+
+    // let articleModals = document.getElementsByClassName("modal-article");
+    // for (i = 0; i < articleModals.length; i++) {
+    //   articleModals[i].className = articleModals[i].className.replace(" active", "");
+    // }
+}
+
+// Закрыть документ по клику
+
+
+// Табы "Событий"
+// function openDate(evt, tabId) {
+
+//   // Получаем массив элементов евентс_табконтент и скрываем их
+//   let tabcontent = document.getElementsByClassName("events__tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//       tabcontent[i].style.display = "none";
+//   }
+//   // Получаем все элементы евентс__таблинкс и удаляем класс "Эктив"
+//   let tablinks = document.getElementsByClassName("events__tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//       tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+//   // Показываем текущую вкладку и добавляем класс Эктив кнопке, открывшей класс
+//   document.getElementById(tabId).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
+
+
+// $(document).mouseup( function(e){ // событие клика по веб-документу
+//   var modalArticle = $(".modal-article"); // сама форма
+//   var modalWindow = $('.modal-article__content'); // окно, в которой находится форма
+
+//   $(".modal__close").on("click", function () {
+//     $(".modal-article__content").hide('fast');//скрывает див модалки при клике на кнопку закрытия
+//   });
+
+//   if ( !modalArticle.is(e.target) // если клик был не по нашему блоку
+//     && modalArticle.has(e.target).length === 0 ) { // и не по его дочерним элементам
+//     modalWindow.hide('fast'); // скрываем его
+//   }
+// });
+
+

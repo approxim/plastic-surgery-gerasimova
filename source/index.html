@@ -323,10 +323,19 @@
             <h2 class="visually-hidden">о клинике</h2>
             <div class="clinic__control">
                 <p class="clinic__title">о клинике</p>
-                <div class="clinic__city">
+
+                <!-- <div class="clinic__city">
                     <button class="clinic__tab clinic__tab--krasnoyarsk" onclick="openPage('krasnoyarsk', this)" id="tab--krasnoyarsk">Красноярск</button>
                     <button class="clinic__tab clinic__tab--abakan" onclick="openPage('abakan', this)">Абакан</button>
-                </div>
+                </div> -->
+
+                <button class="clinic__select" type="button">
+                    <label class="clinic__select-label">Красноярск</label>
+                </button>
+                <ul class="clinic__sorter">
+                    <li class="clinic__sorter-item clinic__sorter-item--krasnoyarsk" id="clinic-krasnoyarsk">Красноярск</li>
+                    <li class="clinic__sorter-item clinic__sorter-item--abakan" id="clinic-abakan">Абакан</li>
+                </ul>
             </div>
 
             <ul class="clinic__wrapper">
