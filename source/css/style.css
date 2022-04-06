@@ -2376,15 +2376,12 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 @media (min-width: 768px) {
   .footer__social {
     margin: 0;
   }
-}
-
-.footer__icon:not(:last-child) {
-  margin-right: 30px;
 }
 
 /* Slider */

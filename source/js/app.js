@@ -141,37 +141,25 @@ $("[data-scroll]").on("click", function (event) {
 
 // Запуск модалки "Запись на консультацию"
 $(".to-appointment").on("click", function () {
+    document.body.style.overflow = 'hidden';
     $("#modal__form").css("display", "flex").hide().fadeIn('fast'); //плавно присваивает FLEX
-
     // Закрытие модалки "Запись на консультацию"
     $(document).mouseup(function (e) { // событие клика по веб-документу
         var modalForm = $("#modal-feedback__form"); // сама форма
         var modalWindow = $('#modal__form'); // окно, в которой находится форма
 
         $("#modal-form__close").on("click", function () {
+            document.body.style.overflow = 'scroll';
             $("#modal__form").hide('fast');//скрывает див модалки при клике на кнопку закрытия
         });
 
         if (!modalForm.is(e.target) // если клик был не по нашему блоку
             && modalForm.has(e.target).length === 0) { // и не по его дочерним элементам
             modalWindow.hide('fast'); // скрываем его
+            document.body.style.overflow = 'scroll';
         }
     });
 });
-
-
-// Закрытие модальных окон
-function closeWindow(event, formID, closeButtonID) {
-    var modalForm = $("#" + formID); // сама форма
-    var closeButton = $('#' + closeButtonID)
-    if (closeButton.is(event.target)) {
-        document.getElementById(formID).classList.remove('active')
-    }
-    if (modalForm.is(event.target)) { // если клик был не по нашему блоку
-        document.getElementById(formID).classList.remove('active')
-    }
-}
-
 
 // Открытие модального окна статьи по клику
 function openArticle(evt, modalArticleId, articleItemId) {
@@ -185,8 +173,28 @@ function openArticle(evt, modalArticleId, articleItemId) {
         flag = 1;
     }, false);
     element.addEventListener("mouseup", function () {
-        if (flag === 0) {
+        if (flag === 0) {            
             document.getElementById(modalArticleId).className += " active";
+            document.body.style.overflow = 'hidden';
         }
     }, false);
 }
+
+// Закрытие модальных окон
+function closeWindow(event, formID, closeButtonID) {
+    var modalForm = $("#" + formID); // сама форма
+    var closeButton = $('#' + closeButtonID)
+    if (closeButton.is(event.target)) {
+        document.body.style.overflow = 'scroll'
+        document.getElementById(formID).classList.remove('active')
+    }
+    if (modalForm.is(event.target)) { // если клик был не по нашему блоку
+        document.body.style.overflow = 'scroll'
+        document.getElementById(formID).classList.remove('active')
+    }
+}
+
+
+
+
+        

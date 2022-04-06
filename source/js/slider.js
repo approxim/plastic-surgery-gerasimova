@@ -92,6 +92,13 @@ $(document).ready(function(){
   // $(".clinic__tab").on('click', function (e) {
   //   $(".clinic__slider").slick('reinit');
   // });
+
+  $('.reviews__image-slider').on("mousedown mouseup", function (event) {
+    event.stopPropagation();
+  })
+  $('.reviews__image-slider').on("touchstart touchend", function (event) {
+    event.stopPropagation();
+  })
 })
 
 // Одинаковая высота слайдов в slick slider

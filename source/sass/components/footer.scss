@@ -69,12 +69,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 
     @media (min-width: $tablet-width) {
         margin: 0;
     }
 }
-
-.footer__icon:not(:last-child) {
-    margin-right: 30px;
-}
+// .footer__icon:not(:last-child) {
+//     // margin-right: 30px;
+// }
