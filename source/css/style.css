@@ -106,6 +106,12 @@ button, a {
 html {
   height: 100%;
 }
+html.hystmodal__opened {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -2018,6 +2024,7 @@ h3 {
   line-height: 130%;
   color: #273040;
   font-weight: 700;
+  text-align: left;
   margin-top: 20px;
 }
 @media (min-width: 768px) {
@@ -2064,6 +2071,7 @@ h3 {
 @media (min-width: 1440px) {
   .feedback__form {
     padding: 80px;
+    width: 60%;
   }
 }
 
@@ -2162,15 +2170,12 @@ h3 {
 }
 
 .feedback__radio {
-  margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .feedback__radio {
-    width: 250px;
+    width: 300px;
   }
 }
 
@@ -2180,6 +2185,7 @@ h3 {
   align-items: center;
   cursor: pointer;
   font-size: 14px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .feedback__city {
@@ -2198,6 +2204,9 @@ h3 {
   .feedback__city--abakan {
     justify-self: flex-end;
   }
+}
+.feedback__city:last-of-type {
+  margin-bottom: 16px;
 }
 .feedback__city input + .feedback__mark {
   width: 8px;

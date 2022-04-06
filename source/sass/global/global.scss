@@ -1,5 +1,13 @@
 html {
   height: 100%;
+
+  // для отсутствия прокрутки в режиме модального окна
+  &.hystmodal__opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+  }
 }
 
 body {

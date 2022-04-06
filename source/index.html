@@ -89,9 +89,9 @@
             </div>
         </section>
 
-        <!-- Принцип работы -->
+        <!-- Принципы работы -->
         <section class="principle container" id="principle">
-            <h2>Принцип работы</h2>
+            <h2>Принципы работы</h2>
 
             <ul class="principle__wrapper">
                 <li class="principle__inner principle__inner--1">
@@ -651,9 +651,9 @@
     </div>
 
     <!-- Модальное окно со статьями -->
-    <div class="modal-article" id="modal-article_1">
-        <div class="modal-article__content">
-            <button class="modal__close" type="button"></button>
+    <div class="modal-article" id="modal-article_1" onclick="closeModel2(event, 'modal-article_1', 'modal-article_1-child')">
+        <div class="modal-article__content" id="modal-article_1-child">
+            <button class="modal__close" type="button" onclick="closeModal(event, 'modal-article_1')"></button>
 
             <h3 class="modal-article__title">Рубцы после абдоминопластики</h3>
 
@@ -672,10 +672,10 @@
                 <li>Уменьшение нагрузки - считается, что один более длительный наркоз лучше нескольких коротких</li>
             </ul>
         </div>
-    </div>
-    <div class="modal-article" id="modal-article_2">
-        <div class="modal-article__content">
-            <button class="modal__close" type="button"></button>
+    </div>  
+    <div class="modal-article" id="modal-article_2" onclick="closeModel2(event, 'modal-article_2', 'modal-article_2-child')">
+        <div class="modal-article__content" id="modal-article_2-child">
+            <button class="modal__close" type="button" onclick="closeModal(event, 'modal-article_2')"></button>
 
             <h3 class="modal-article__title">Рубцы после абдоминопластики</h3>            
             
@@ -696,7 +696,64 @@
     <!-- Модальное окно прайса -->
     <div class="modal-price">
         <div class="modal-price__content">
-            <button class="modal__close" id="modal-price__close" type="button"></button>
+            <button class="modal__close" type="button"></button>
+
+            <div class="modal-price__operation">
+                <p class="modal-price__operation-title modal-price__title">Риносептопластика и ринопластика</p>
+                <p class="modal-price__operation-desc">операция по изменению формы носа</p>
+
+                <div class="modal-price__operation-first modal-price__item">
+                    <p class="modal-price__operation-name modal-price__name">Ринопластика первичная</p>
+                    <p class="modal-price__operation-cost modal-price__cost">
+                        <span>220 000</span>
+                        <span>руб.</span>
+                    </p>
+                </div>
+
+                <div class="modal-price__operation-second modal-price__item">
+                    <p class="modal-price__operation-name modal-price__name">Ринопластика вторичная</p>
+                    <p class="modal-price__operation-cost modal-price__cost">
+                        <span>280 000</span>
+                        <span>руб.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal-price__anesthesia">
+                <p class="modal-price__anesthesia-title modal-price__title">Анестезия</p>
+
+                <div class="modal-price__anesthesia-item modal-price__item">
+                    <div>
+                        <p class="modal-price__anesthesia-name modal-price__name">Общий комбинированный наркоз</p>
+                        <p class="modal-price__anesthesia-desc">Пациент находится в глубоком сне и не чувствует никаких внешних раздражителей и боли</p>
+                    </div>
+                    <p class="modal-price__anesthesia-cost modal-price__cost">
+                        <span>15 000</span>
+                        <span>руб.</span>
+                    </p>
+                </div>
+
+                <div class="modal-price__anesthesia-item modal-price__item">                    
+                    <div>
+                        <p class="modal-price__anesthesia-name modal-price__name">Седация</p>
+                        <p class="modal-price__anesthesia-desc">Пациент находится в сознании в состоянии лёгкой дремоты и приглушеной болевой чувствительности</p>
+                    </div>
+                    <p class="modal-price__anesthesia-cost modal-price__cost">
+                        <span>6 000</span>
+                        <span>руб.</span>
+                    </p>
+                </div>
+            </div>
+
+            <p class="modal-price__individual">Более точную стоимость операции я рассчитаю индивидуально</p>
+            <button class="modal-price__button brown-button to-appointment" type="button">
+                <span>Записаться на консультацию</span>
+            </button>
+        </div>
+    </div>
+    <div class="modal-price">
+        <div class="modal-price__content">
+            <button class="modal__close" type="button"></button>
 
             <div class="modal-price__operation">
                 <p class="modal-price__operation-title modal-price__title">Риносептопластика и ринопластика</p>
