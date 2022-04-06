@@ -324,22 +324,18 @@
             <div class="clinic__control">
                 <p class="clinic__title">о клинике</p>
 
-                <!-- <div class="clinic__city">
-                    <button class="clinic__tab clinic__tab--krasnoyarsk" onclick="openPage('krasnoyarsk', this)" id="tab--krasnoyarsk">Красноярск</button>
-                    <button class="clinic__tab clinic__tab--abakan" onclick="openPage('abakan', this)">Абакан</button>
-                </div> -->
-
                 <button class="clinic__select" type="button">
                     <label class="clinic__select-label">Красноярск</label>
                 </button>
                 <ul class="clinic__sorter">
-                    <li class="clinic__sorter-item clinic__sorter-item--krasnoyarsk" id="clinic-krasnoyarsk">Красноярск</li>
-                    <li class="clinic__sorter-item clinic__sorter-item--abakan" id="clinic-abakan">Абакан</li>
+                    <li class="clinic__sorter-item" onclick="openPage('clinic-krasnoyarsk', this)">Красноярск</li>
+                    <li class="clinic__sorter-item" onclick="openPage('clinic-abakan', this)">Абакан</li>
+                    <li class="clinic__sorter-item" onclick="openPage('clinic-sochi', this)">Сочи</li>
                 </ul>
             </div>
 
             <ul class="clinic__wrapper">
-                <li class="clinic__inner" id="krasnoyarsk">
+                <li class="clinic__inner" id="clinic-krasnoyarsk">
                     <div class="clinic__item">
                         <div class="clinic__images">
                             <div>
@@ -363,7 +359,7 @@
                     </div>
                 </li>
 
-                <li class="clinic__inner" id="abakan">
+                <li class="clinic__inner" id="clinic-abakan">
                     <div class="clinic__item">
                         <div class="clinic__images">
                             <div>                                
@@ -381,6 +377,31 @@
                                 <address class="clinic__address">
                                     <span>Адрес: </span>
                                     <span>Абакан, ул. Советская 33</span>
+                                </address>
+                            </a>
+                            <button class="clinic__button brown-button to-appointment">Записаться на прием</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="clinic__inner" id="clinic-sochi">
+                    <div class="clinic__item">
+                        <div class="clinic__images">
+                            <div>                                
+                                <img class="clinic__image" src="media/images/med_clinic_sample.jpg" srcset="media/images/med_clinic_sample.jpg 2x" alt="наша клиника" width="256" height="276">
+                            </div>
+                            <div>
+                                <img class="clinic__image" src="media/images/about-1.jpg" srcset="media/images/about-1@2x.jpg 2x" alt="наша клиника" width="256" height="276">
+                            </div>
+                        </div>
+                        <div class="clinic__info">
+                            <p class="clinic__text">Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.
+
+                            Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!</p>
+                            <a href="#">
+                                <address class="clinic__address">
+                                    <span>Адрес: </span>
+                                    <span>Сочи, ул. Советская 33</span>
                                 </address>
                             </a>
                             <button class="clinic__button brown-button to-appointment">Записаться на прием</button>
@@ -577,7 +598,7 @@
                     </label>
 
                     <label class="feedback__city feedback__city--abakan">
-                        <input class="visually-hidden" type="radio" name="city" value="abakan" checked>
+                        <input class="visually-hidden" type="radio" name="city" value="abakan">
                         <span class="feedback__mark feedback__mark--abakan"></span>
                         <span class="feedback__label feedback__label--abakan">Абакан</span>
                     </label>
@@ -649,7 +670,7 @@
                 </label>
 
                 <label class="feedback__city feedback__city--abakan">
-                    <input class="visually-hidden" type="radio" name="city" value="abakan" checked>
+                    <input class="visually-hidden" type="radio" name="city" value="abakan">
                     <span class="feedback__mark feedback__mark--abakan"></span>
                     <span class="feedback__label feedback__label--abakan">Абакан</span>
                 </label>
@@ -660,9 +681,9 @@
     </div>
 
     <!-- Модальное окно со статьями -->
-    <div class="modal-article" id="modal-article_1" onclick="closeModel2(event, 'modal-article_1', 'modal-article_1-child')">
-        <div class="modal-article__content" id="modal-article_1-child">
-            <button class="modal__close" type="button" onclick="closeModal(event, 'modal-article_1')"></button>
+    <div class="modal-article" id="modal-article_1" onclick="closeWindow(event, 'modal-article_1', 'modal-article-1__close')">
+        <div class="modal-article__content" id="modal-article-form-1">
+            <button class="modal__close" type="button" id="modal-article-1__close"></button>
 
             <h3 class="modal-article__title">Рубцы после абдоминопластики</h3>
 
@@ -682,12 +703,12 @@
             </ul>
         </div>
     </div>  
-    <div class="modal-article" id="modal-article_2" onclick="closeModel2(event, 'modal-article_2', 'modal-article_2-child')">
-        <div class="modal-article__content" id="modal-article_2-child">
-            <button class="modal__close" type="button" onclick="closeModal(event, 'modal-article_2')"></button>
 
-            <h3 class="modal-article__title">Рубцы после абдоминопластики</h3>            
-            
+    <div class="modal-article" id="modal-article_2" onclick="closeWindow(event, 'modal-article_2', 'modal-article-2__close')">
+        <div class="modal-article__content" id="modal-article-form-2">
+            <button class="modal__close" type="button" id="modal-article-2__close"></button>
+            <h3 class="modal-article__title">Рубцы после абдоминопластики</h3>
+            <p>Рубцы после абдоминопластики волнуют практически каждого…</p>
             <ul>
                 <li>
                     ️Экономия времени и средств на предоперационные исследования
@@ -699,7 +720,7 @@
                 <li>Уменьшение нагрузки - считается, что один более длительный наркоз лучше нескольких коротких</li>
             </ul>
         </div>
-    </div>
+    </div> 
 
 
     <!-- Модальное окно прайса -->

@@ -1448,7 +1448,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
 }
 @media (min-width: 768px) {
   .clinic__control {
@@ -1458,11 +1458,16 @@ h3 {
 .clinic__control::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   background-color: #273040;
   height: 1px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .clinic__control::after {
+    bottom: 0;
+  }
 }
 
 .clinic__title {
@@ -1480,29 +1485,72 @@ h3 {
   }
 }
 
-.clinic__tab {
-  background-color: transparent;
-  border: none;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 130%;
+.clinic__select {
+  font-family: Inter;
+  position: relative;
+  border: 1px solid #273040;
+  height: 1.5rem;
+  width: 6rem;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #273040;
+  background: none;
+  transition: 0.3s all ease;
+  z-index: 300;
+  cursor: pointer;
 }
-@media (min-width: 768px) {
-  .clinic__tab {
-    font-size: 20px;
-  }
+
+.clinic__select > * {
+  cursor: pointer;
 }
-@media (min-width: 1440px) {
-  .clinic__tab {
-    font-size: 24px;
-  }
+
+.clinic__select.active + .clinic__sorter {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
-.clinic__tab.active {
+
+.clinic__select.selected {
+  color: #a98143;
+  border-color: #a98143;
+}
+
+.clinic__select:hover {
+  border-color: #a98143;
   color: #a98143;
 }
-.clinic__tab:hover {
+
+.clinic__select .label-text {
+  font-size: 0.6rem;
+}
+
+.clinic__sorter {
+  position: absolute;
+  top: 1.6rem;
+  right: 0;
+  z-index: 200;
+  width: 6rem;
+  border: 1px solid #273040;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+  color: #273040;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  background-color: #ffffff;
+}
+
+.clinic__sorter .clinic__sorter-item {
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  transition: background, color 0.3s ease;
+}
+
+.clinic__sorter .clinic__sorter-item:hover {
   color: #a98143;
+  background: #ffffff;
 }
 
 .clinic__inner {
