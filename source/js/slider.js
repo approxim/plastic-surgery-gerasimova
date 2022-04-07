@@ -63,7 +63,7 @@ $(document).ready(function(){
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1
-  }).on('afterChange', function(event, slick){
+  }).on('mousemove', function(event, slick){
     event.stopPropagation(); // Слайдер в слайдере
   });
 
@@ -88,7 +88,7 @@ $(document).ready(function(){
     ]
   });
 
-  
+
 
 
 
@@ -117,7 +117,7 @@ $(document).ready(function(){
 // $('.operations__result').click(function() {
   // $('.modal-result').fadeIn();
 
-  
+
 
     // Кнопки в модальном окне
   // $('.modal-result__control').slick({
