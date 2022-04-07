@@ -1,0 +1,43 @@
+.modal-send {
+    @include modal-window;
+
+    // display: flex;
+
+    &.active {
+        display: flex;
+    }
+}
+
+.modal-send__content {
+    @include modal-content;
+
+    width: 90%;
+    max-width: 300px;
+
+    padding: 20px;
+
+    @media(min-width: $tablet-width) {
+        padding: 30px;
+        max-width: 600px;
+    }
+
+    @media(min-width: $desktop-width) {
+        padding: 50px;
+        max-width: 800px;
+    }
+
+    p {
+        color: $color-dark;
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+
+        @media(min-width: $tablet-width) {
+            font-size: 20px;
+        }
+
+        @media(min-width: $desktop-width) {
+            font-size: 24px;
+        }
+    }
+}
