@@ -1,0 +1,141 @@
+.modal-result {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9997;
+
+    background-color: transparentize($color-dark, .5);
+
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: scroll;
+    display: none;
+    
+
+    &.active {
+        display: flex;
+        // visibility: visible;
+        // height: auto;
+    }
+
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+
+    .slick-dots {
+        bottom: -38px;
+    }
+}
+
+.modal-result__content {
+    @include modal-content;
+
+    width: 90%;
+    max-width: 960px;
+    padding: 32px 20px;
+
+    @media(min-width: $tablet-width) {
+        padding: 70px 50px;
+    }
+
+    @media(min-width: $desktop-width) {
+        padding: 100px 90px 90px;
+    }
+}
+
+.modal-result__title {
+    color: $color-dark;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: center;
+
+    margin-bottom: 16px;
+
+    @media(min-width: $tablet-width) {
+        font-size: 25px;
+    }
+
+    @media(min-width: $desktop-width) {
+        font-size: 32px;
+    }
+}
+
+.modal-result__control {
+    margin-bottom: 17px;
+
+    .slick-list.draggable {
+        padding-left: 0;
+        padding-right: 20%;
+
+        @media(min-width: $tablet-width) {
+            padding-right: 0;
+        }
+    }
+}
+
+
+.modal-result__tab {
+    font-size: 14px;
+    line-height: 130%;
+    white-space: nowrap;
+
+    border: none;
+    background-color: transparent;
+    padding: 8px 0;
+
+    &.active {
+        color: $color-brown;
+    }
+
+    @media (min-width: $tablet-width) {
+        font-size: 18px;
+    }
+
+    @media(min-width: $desktop-width) {
+        font-size: 24px;
+    }
+}
+
+
+
+.modal-result__slide {
+    img {
+        width: 100%;
+        margin: 0 auto;
+
+        @media (min-width: $tablet-width) {
+            max-width: 85%;
+        }
+
+        @media(min-width: $desktop-width) {
+            max-width: 682px;
+        }
+    }
+}
+
+.modal-result__button {
+    text-align: center;
+    margin: 44px auto 0;
+    width: auto;
+    max-width: 300px;
+    display: block;
+
+    @media(min-width: $tablet-width) {
+        margin-top: 48px;
+        width: 320px;
+        max-width: 350px;
+    }
+
+    @media(min-width: $desktop-width) {
+        width: 400px;
+        max-width: 420px;
+    }
+}

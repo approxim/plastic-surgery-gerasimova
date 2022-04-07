@@ -59,10 +59,37 @@ function openPage(pageName, elmnt) {
     // даем класс эктив нажатой кнопке
     elmnt.className += " active";
 }
-
-
 // Делаем активной вкладку "Красноярск"
 document.querySelector(".clinic__sorter-item").click();
+
+
+
+// Табы в модальном окне Operations (Result)
+function openResult(pageName, elmnt) {
+
+    var i, modalSliderResult, elmnt;
+    modalSliderResult = document.getElementsByClassName("modal-result__slides");
+
+    for (i = 0; i < modalSliderResult.length; i++) {
+        modalSliderResult[i].style.visibility = "hidden";
+        modalSliderResult[i].style.height = "0";
+    }
+
+    document.getElementById(pageName).style.visibility = "visible";
+    document.getElementById(pageName).style.height = "auto";
+
+    //Получаем все кнопки и удаляем класс "Эктив"
+    let allResultButtons = document.getElementsByClassName("modal-result__tab");
+    for (i = 0; i < allResultButtons.length; i++) {
+        allResultButtons[i].className = allResultButtons[i].className.replace(" active", "");
+    }
+    // даем класс эктив нажатой кнопке
+    elmnt.className += " active";
+}
+// Кликаем по кнопке слайдера Result
+document.querySelector("modal-result__tab")
+
+
 
 // отображение элементов Операции (тело-лицо)
 $(document).ready(function () {
@@ -176,6 +203,56 @@ function openWindow(evt, modalArticleId, articleItemId) {
         if (flag === 0) {            
             document.getElementById(modalArticleId).className += " active";
             document.body.style.overflow = 'hidden';
+
+            $('#' + modalArticleId + ' .modal-result__tab:first-child').trigger('click');
+            
+            $('#' + modalArticleId + ' .modal-result__control').slick({
+                mobileFirst: true,
+                infinite: false,
+                dots: false,
+                arrows: false,
+                fade: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                focusOnSelect: true,
+                prevArrow: '<div class="prev"></div>',
+                nextArrow: '<div class="next"></div>',
+            
+                responsive: [
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      // focusOnSelect: false,
+                      slidesToShow: 5,
+                      arrows: false
+                    }
+                  }
+                ]
+            });
+            
+            // модальное окно Result
+            $('#' + modalArticleId + ' .modal-result__slides').slick({
+            lazyLoad: 'ondemand',
+            mobileFirst: true,
+            dots: true,
+            infinite: false,
+            arrows: false,
+            fade: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    dots: false,
+                    prevArrow: '<div class="prev"></div>',
+                    nextArrow: '<div class="next"></div>'
+                }
+                }
+            ]
+            });
         }
     }, false);
 }

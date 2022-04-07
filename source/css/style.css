@@ -3138,6 +3138,18 @@ h3 {
   }
 }
 
+.modal-price__operation-item {
+  padding: 12px 0;
+}
+@media (min-width: 768px) {
+  .modal-price__operation-item {
+    padding: 16px 0;
+  }
+}
+.modal-price__operation-item:not(:first-of-type) {
+  border-top: 1px solid #273040;
+}
+
 @media (min-width: 768px) {
   .modal-price__item {
     display: flex;
@@ -3213,9 +3225,6 @@ h3 {
   }
 }
 
-.modal-price__anesthesia-title {
-  margin-bottom: 16px;
-}
 @media (min-width: 768px) {
   .modal-price__anesthesia-title {
     font-size: 22px;
@@ -3227,18 +3236,16 @@ h3 {
   }
 }
 
-.modal-price__anesthesia-item:first-of-type {
-  margin-bottom: 24px;
+.modal-price__anesthesia-item {
+  padding: 12px 0;
 }
 @media (min-width: 768px) {
-  .modal-price__anesthesia-item:first-of-type {
-    font-size: 28px;
+  .modal-price__anesthesia-item {
+    padding: 16px 0;
   }
 }
-@media (min-width: 1440px) {
-  .modal-price__anesthesia-item:first-of-type {
-    font-size: 32px;
-  }
+.modal-price__anesthesia-item:not(:first-of-type) {
+  border-top: 1px solid #273040;
 }
 
 .modal-price__anesthesia-desc {
@@ -3263,26 +3270,6 @@ h3 {
   position: relative;
 }
 
-.modal-price__operation-first::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #273040;
-  bottom: -12px;
-}
-
-.modal-price__anesthesia:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #273040;
-  bottom: 40%;
-}
-
 .modal-price__individual {
   margin-bottom: 24px;
 }
@@ -3300,6 +3287,144 @@ h3 {
 @media (min-width: 768px) {
   .modal-price__button {
     align-self: flex-start;
+  }
+}
+
+.modal-result {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  background-color: rgba(39, 48, 64, 0.5);
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: scroll;
+  display: none;
+}
+.modal-result.active {
+  display: flex;
+}
+.modal-result .slick-track {
+  display: flex;
+}
+.modal-result .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.modal-result .slick-dots {
+  bottom: -38px;
+}
+
+.modal-result__content {
+  margin: auto 20px auto;
+  height: auto;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(39, 48, 64, 0.2);
+  position: relative;
+  width: 90%;
+  max-width: 960px;
+  padding: 32px 20px;
+}
+@media (min-width: 768px) {
+  .modal-result__content {
+    padding: 70px 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .modal-result__content {
+    padding: 100px 90px 90px;
+  }
+}
+
+.modal-result__title {
+  color: #273040;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 110%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .modal-result__title {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1440px) {
+  .modal-result__title {
+    font-size: 32px;
+  }
+}
+
+.modal-result__control {
+  margin-bottom: 17px;
+}
+.modal-result__control .slick-list.draggable {
+  padding-left: 0;
+  padding-right: 20%;
+}
+@media (min-width: 768px) {
+  .modal-result__control .slick-list.draggable {
+    padding-right: 0;
+  }
+}
+
+.modal-result__tab {
+  font-size: 14px;
+  line-height: 130%;
+  white-space: nowrap;
+  border: none;
+  background-color: transparent;
+  padding: 8px 0;
+}
+.modal-result__tab.active {
+  color: #a98143;
+}
+@media (min-width: 768px) {
+  .modal-result__tab {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .modal-result__tab {
+    font-size: 24px;
+  }
+}
+
+.modal-result__slide img {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .modal-result__slide img {
+    max-width: 85%;
+  }
+}
+@media (min-width: 1440px) {
+  .modal-result__slide img {
+    max-width: 682px;
+  }
+}
+
+.modal-result__button {
+  text-align: center;
+  margin: 44px auto 0;
+  width: auto;
+  max-width: 300px;
+  display: block;
+}
+@media (min-width: 768px) {
+  .modal-result__button {
+    margin-top: 48px;
+    width: 320px;
+    max-width: 350px;
+  }
+}
+@media (min-width: 1440px) {
+  .modal-result__button {
+    width: 400px;
+    max-width: 420px;
   }
 }
 /*# sourceMappingURL=style.css.map */

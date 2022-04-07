@@ -168,7 +168,7 @@
                         <img class="operations__img" src="media/images/operations-1.jpg" srcset="media/images/operations-1@2x.jpg 2x" alt="изменение формы носа" width="228" height="144">
 
                         <button class="operations__price brown-button" type="button" onmousedown="openWindow(event, 'modal-price_1', 'price__item_1')" id="price__item_1">Смотреть прайс</button>
-                        <button class="operations__result lite-button" type="button">Результаты</button>
+                        <button class="operations__result lite-button" type="button" onmousedown="openWindow(event, 'modal-result_1', 'result__item_1')" id="result__item_1">Результаты</button>
                     </div>
                 </div>
 
@@ -181,7 +181,7 @@
                         <img class="operations__img" src="media/images/operations-2.jpg" srcset="media/images/operations-2@2x.jpg 2x" alt="изменение формы век" width="228" height="144">
 
                         <button class="operations__price brown-button" type="button" onmousedown="openWindow(event, 'modal-price_2', 'price__item_2')" id="price__item_2">Смотреть прайс</button>
-                        <button class="operations__result lite-button" type="button">Результаты</button>
+                        <button class="operations__result lite-button" type="button" onmousedown="openWindow(event, 'modal-result_2', 'result__item_2', 'modal-result__control__2')" id="result__item_2">Результаты</button>
                     </div>
                 </div>
 
@@ -735,7 +735,7 @@
                 <p class="modal-price__operation-title modal-price__title">Риносептопластика и ринопластика</p>
                 <p class="modal-price__operation-desc">операция по изменению формы носа</p>
 
-                <div class="modal-price__operation-first modal-price__item">
+                <div class="modal-price__operation-item modal-price__item">
                     <p class="modal-price__operation-name modal-price__name">Ринопластика первичная</p>
                     <p class="modal-price__operation-cost modal-price__cost">
                         <span>220 000</span>
@@ -743,7 +743,7 @@
                     </p>
                 </div>
 
-                <div class="modal-price__operation-second modal-price__item">
+                <div class="modal-price__operation-item modal-price__item">
                     <p class="modal-price__operation-name modal-price__name">Ринопластика вторичная</p>
                     <p class="modal-price__operation-cost modal-price__cost">
                         <span>280 000</span>
@@ -842,79 +842,139 @@
         </div>
     </div>
 
+    
     <!-- Модальное окно результат -->
-    <div class="modal-result">
+    <div class="modal-result" id="modal-result_1" onclick="closeWindow(event, 'modal-result_1', 'modal-result-1__close')">
         <div class="modal-result__content">
-            <div class="modal-result__control">
-                <button class="modal-result__tab">Операция 1</button>
-                <button class="modal-result__tab">Операция 2</button>
-                <button class="modal-result__tab">Операция 3</button>
-                <button class="modal-result__tab">Операция 4</button>
-                <button class="modal-result__tab">Операция 5</button>
+            <button class="modal__close" id="modal-result-1__close" type="button"></button>
+
+            <h3 class="modal-result__title">Риносептопластика и ринопластика - результаты</h3>
+
+            <div class="modal-result__control" id="modal-result__control__1">
+                <button class="modal-result__tab" onclick="openResult('result-slider__1_1', this)">Операция 1</button>
+                <button class="modal-result__tab" onclick="openResult('result-slider__1_2', this)">Операция 2</button>
+                <button class="modal-result__tab" onclick="openResult('result-slider__1_3', this)">Операция 3</button>
+                <button class="modal-result__tab" onclick="openResult('result-slider__1_4', this)">Операция 4</button>
+                <button class="modal-result__tab" onclick="openResult('result-slider__1_5', this)">Операция 5</button>
             </div>
 
-            <div class="modal-result__slides" >
+            <div class="modal-result__slides" id="result-slider__1_1">
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
-                </div>
-            </div>
-
-            <div class="modal-result__slides">
-                <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
-                </div>
-                <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
-                </div>
-                <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
             </div>
 
-            <div class="modal-result__slides">
+            <div class="modal-result__slides" id="result-slider__1_2">
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
-                </div>
-            </div>
-
-            <div class="modal-result__slides">
-                <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
-                </div>
-                <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
-                </div>
-                <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
             </div>
 
-            <div class="modal-result__slides">
+            <div class="modal-result__slides" id="result-slider__1_3">
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
                 <div class="modal-result__slide">
-                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
                 </div>
             </div>
 
-            <button class="brown-button to-appointment">
-                <span>Записаться на прием</span>
+            <div class="modal-result__slides" id="result-slider__1_4">
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+            </div>
+
+            <div class="modal-result__slides" id="result-slider__1_5">
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+            </div>
+
+            <button class="modal-result__button brown-button to-appointment" >
+                <span>Записаться на консультацию</span>
+            </button>
+
+        </div>
+    </div>
+
+    <div class="modal-result" id="modal-result_2" onclick="closeWindow(event, 'modal-result_2', 'modal-result-2__close')">
+        <div class="modal-result__content">
+            <button class="modal__close" id="modal-result-2__close" type="button"></button>
+
+            <h3 class="modal-result__title">Риносептопластика и ринопластика - результаты</h3>
+
+            <div class="modal-result__control" id="modal-result__control__2">
+                <button class="modal-result__tab" onclick="openResult('result-slider__2_1', this)">Операция 1</button>
+                <button class="modal-result__tab" onclick="openResult('result-slider__2_2', this)">Операция 2</button>
+                <button class="modal-result__tab" onclick="openResult('result-slider__2_3', this)">Операция 3</button>
+            </div>
+
+            <div class="modal-result__slides" id="result-slider__2_1">
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+            </div>
+
+            <div class="modal-result__slides" id="result-slider__2_2">
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+            </div>
+
+            <div class="modal-result__slides" id="result-slider__2_3">
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_3.jpg" data-lazy-srcset="media/images/photo_3.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_1.jpg" data-lazy-srcset="media/images/photo_1.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+                <div class="modal-result__slide">
+                    <img data-lazy="media/images/photo_2.jpg" data-lazy-srcset="media/images/photo_2.jpg 2x" alt="изменение формы носа" width="240" height="163">
+                </div>
+            </div>            
+
+            <button class="modal-result__button brown-button to-appointment" >
+                <span>Записаться на консультацию</span>
             </button>
 
         </div>

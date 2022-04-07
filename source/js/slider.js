@@ -64,9 +64,8 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1
   }).on('afterChange', function(event, slick){
-    event.stopPropagation();
+    event.stopPropagation(); // Слайдер в слайдере
   });
-
 
   // clinic
   $('.clinic__images').slick({
@@ -89,6 +88,10 @@ $(document).ready(function(){
     ]
   });
 
+  
+
+
+
   // Исправление ошибки, при которой нажатие на слайд было при пролистывании
   $('.reviews__image-slider').on("mousedown mouseup", function (event) {
     event.stopPropagation();
@@ -99,9 +102,70 @@ $(document).ready(function(){
 })
 
 // Одинаковая высота слайдов в slick slider
-$('.reviews__wrapper').on('setPosition', function () {
-  $(this).find('.reviews__item').height('auto');
-  var slickTrack = $(this).find('.slick-track');
-  var slickTrackHeight = $(slickTrack).height();
-  $(this).find('.reviews__item').css('height', slickTrackHeight + 'px');
-});
+// $('.reviews__wrapper').on('setPosition', function () {
+//   $(this).find('.reviews__item').height('auto');
+//   var slickTrack = $(this).find('.slick-track');
+//   var slickTrackHeight = $(slickTrack).height();
+//   $(this).find('.reviews__item').css('height', slickTrackHeight + 'px');
+// });
+
+
+
+
+
+
+// $('.operations__result').click(function() {
+  // $('.modal-result').fadeIn();
+
+  
+
+    // Кнопки в модальном окне
+  // $('.modal-result__control').slick({
+  //   mobileFirst: true,
+  //   infinite: false,
+  //   dots: false,
+  //   arrows: false,
+  //   fade: false,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   focusOnSelect: true,
+  //   prevArrow: '<div class="prev"></div>',
+  //   nextArrow: '<div class="next"></div>',
+
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         // focusOnSelect: false,
+  //         slidesToShow: 5,
+  //         arrows: false
+  //       }
+  //     }
+  //   ]
+  // });
+
+  // // модальное окно Result
+  // $(".modal-result__slides").slick({
+  //   lazyLoad: 'ondemand',
+  //   mobileFirst: true,
+  //   dots: true,
+  //   infinite: false,
+  //   arrows: false,
+  //   fade: true,
+  //   speed: 300,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         arrows: true,
+  //         dots: false,
+  //         prevArrow: '<div class="prev"></div>',
+  //         nextArrow: '<div class="next"></div>'
+  //       }
+  //     }
+  //   ]
+  // });
+
+// });
