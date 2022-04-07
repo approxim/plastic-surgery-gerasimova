@@ -57,7 +57,7 @@ $(document).ready(function(){
   });
 
   // reviews photo
-  $('.reviews__image-slider').slick({
+  $('.reviews__image').slick({
     infinite: false,
     dots: true,
     arrows: false,
