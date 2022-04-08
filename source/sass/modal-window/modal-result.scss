@@ -1,26 +1,6 @@
 .modal-result {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 9997;
-
-    background-color: transparentize($color-dark, .5);
-
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    overflow: scroll;
-    display: none;
+    @include modal-window;
     
-
-    &.active {
-        display: flex;
-        // visibility: visible;
-        // height: auto;
-    }
-
     .slick-track {
         display: flex;
     }

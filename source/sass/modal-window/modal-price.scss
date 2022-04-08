@@ -1,9 +1,5 @@
 .modal-price {
     @include modal-window;
-
-    &.active {
-        display: flex;
-    }
 }
 
 .modal-price__content {

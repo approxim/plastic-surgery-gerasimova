@@ -2816,13 +2816,25 @@ h3 {
   left: 0;
   bottom: 0;
   z-index: 9997;
-  background-color: rgba(39, 48, 64, 0.5);
+  background-color: transparent;
+  display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   overflow: scroll;
-  display: none;
+  height: auto;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   z-index: 1000000;
+}
+.modal-form.active {
+  background-color: rgba(39, 48, 64, 0.5);
+  max-height: 100%;
+  opacity: 1;
 }
 
 .modal-feedback__form {
@@ -2921,15 +2933,24 @@ h3 {
   left: 0;
   bottom: 0;
   z-index: 9997;
-  background-color: rgba(39, 48, 64, 0.5);
+  background-color: transparent;
+  display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   overflow: scroll;
-  display: none;
+  height: auto;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
 }
 .modal-article.active {
-  display: flex;
+  background-color: rgba(39, 48, 64, 0.5);
+  max-height: 100%;
+  opacity: 1;
 }
 
 .modal-article__content {
@@ -3041,15 +3062,24 @@ h3 {
   left: 0;
   bottom: 0;
   z-index: 9997;
-  background-color: rgba(39, 48, 64, 0.5);
+  background-color: transparent;
+  display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   overflow: scroll;
-  display: none;
+  height: auto;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
 }
 .modal-price.active {
-  display: flex;
+  background-color: rgba(39, 48, 64, 0.5);
+  max-height: 100%;
+  opacity: 1;
 }
 
 .modal-price__content {
@@ -3286,15 +3316,24 @@ h3 {
   left: 0;
   bottom: 0;
   z-index: 9997;
-  background-color: rgba(39, 48, 64, 0.5);
+  background-color: transparent;
+  display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   overflow: scroll;
-  display: none;
+  height: auto;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
 }
 .modal-result.active {
-  display: flex;
+  background-color: rgba(39, 48, 64, 0.5);
+  max-height: 100%;
+  opacity: 1;
 }
 .modal-result .slick-track {
   display: flex;
@@ -3424,16 +3463,24 @@ h3 {
   left: 0;
   bottom: 0;
   z-index: 9997;
-  background-color: rgba(39, 48, 64, 0.5);
+  background-color: transparent;
+  display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   overflow: scroll;
-  display: none;
-  display: none;
+  height: auto;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
 }
 .modal-send.active {
-  display: flex;
+  background-color: rgba(39, 48, 64, 0.5);
+  max-height: 100%;
+  opacity: 1;
 }
 
 .modal-send__content {

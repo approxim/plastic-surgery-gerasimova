@@ -1,10 +1,6 @@
 .modal-article {
     @include modal-window;
-
-    &.active {
-        display: flex;
-    }
-}   
+}
 
 .modal-article__content {
     @include modal-content;

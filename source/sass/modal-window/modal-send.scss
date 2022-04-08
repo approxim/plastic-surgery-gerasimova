@@ -1,11 +1,5 @@
 .modal-send {
     @include modal-window;
-
-    display: none;
-
-    &.active {
-        display: flex;
-    }
 }
 
 .modal-send__content {

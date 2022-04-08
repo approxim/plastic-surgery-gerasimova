@@ -6,14 +6,29 @@
     bottom: 0;
     z-index: 9997;
 
-    background-color: transparentize($color-dark, .5);
-   
+    background-color: transparent;
+
+    display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     overflow: scroll;
 
-    display: none;
+
+    height: auto;
+    max-height: 0;
+    opacity: 0;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+
+    &.active {
+        background-color: transparentize($color-dark, .5);
+        max-height: 100%;
+        opacity: 1;
+        // clip: rect(500px 500px 500px 500px);
+    }
 }
 
 @mixin modal-content {
@@ -21,5 +36,5 @@
     height: auto;
     background-color: $color-white;
     box-shadow: 5px 5px 10px transparentize($color-dark, .8);
-    position: relative;    
+    position: relative;
 }
