@@ -1,4 +1,3 @@
-// sliders
 $(document).ready(function(){
   // operations
   $(".operations__wrapper").slick({
@@ -10,40 +9,14 @@ $(document).ready(function(){
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // centerMode: true,
-    // variableWidth: true,
+
     responsive: [
       {
         breakpoint: 768,
         settings: "unslick"
       }
     ]
-  });
-
-  // Статьи
-  $(".articles__list").slick({
-    mobileFirst: true,
-    dots: false,
-    infinite: false,
-    arrows: false,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: '<div class="prev"></div>',
-    nextArrow: '<div class="next"></div>',
-    adaptiveHeight: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          arrows: true,
-          // centerMode: true,
-          // focusOnSelect: true
-        }
-      }
-    ]
-  });
+  });  
 
   // reviews
   $('.reviews__wrapper').slick({
@@ -88,8 +61,30 @@ $(document).ready(function(){
     ]
   });
 
-
-
+  // Статьи
+  $(".articles__list").slick({
+    mobileFirst: true,
+    dots: false,
+    infinite: false,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<div class="prev"></div>',
+    nextArrow: '<div class="next"></div>',
+    // adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          arrows: true,
+          // centerMode: true,
+          // focusOnSelect: true
+        }
+      }
+    ]
+  });
 
 
   // Исправление ошибки, при которой нажатие на слайд было при пролистывании

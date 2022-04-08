@@ -1,7 +1,7 @@
 .modal-send {
     @include modal-window;
 
-    // display: flex;
+    display: none;
 
     &.active {
         display: flex;
