@@ -36,9 +36,11 @@ $(document).ready(function(){
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1
-  }).on('mousemove', function(event, slick){
+  }).on('touchstart touchend mousedown mouseup', function(event, slick){
     event.stopPropagation(); // Слайдер в слайдере
   });
+
+
 
   // clinic
   $('.clinic__images').slick({

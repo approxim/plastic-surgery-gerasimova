@@ -2634,7 +2634,13 @@ h3 {
 }
 
 .slick-dots {
-  bottom: 15px;
+  bottom: 5px;
+  line-height: 0.6;
+}
+
+.slick-dots li {
+  height: 15px;
+  width: 10px;
 }
 
 .slick-dots li button {
