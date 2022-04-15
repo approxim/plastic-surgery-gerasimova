@@ -2635,12 +2635,24 @@ h3 {
 
 .slick-dots {
   bottom: 5px;
-  line-height: 0.6;
+  line-height: 0.7;
+}
+@media (min-width: 1440px) {
+  .slick-dots {
+    line-height: 0.9;
+  }
 }
 
 .slick-dots li {
   height: 15px;
   width: 10px;
+}
+@media (min-width: 1440px) {
+  .slick-dots li {
+    width: 21px;
+    height: 19px;
+    margin: 0 3px;
+  }
 }
 
 .slick-dots li button {

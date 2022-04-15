@@ -9,13 +9,22 @@
 
 .slick-dots {
     bottom: 5px;
-    line-height: .6;
+    line-height: 0.7;
+
+    @media (min-width: $desktop-width) {
+        line-height: 0.9;
+    }
 }
 
 .slick-dots li {
     height: 15px;
     width: 10px;
-    
+
+    @media (min-width: $desktop-width) {
+        width: 21px;
+        height: 19px;
+        margin: 0 3px;
+    }
 }
 
 .slick-dots li button {
@@ -48,8 +57,6 @@
 .slick-dots li button::before {
     display: none;
 }
-
-
 
 
 // Кастомные стрелки
