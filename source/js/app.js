@@ -139,8 +139,3 @@ function closeWindow(event, formID, closeButtonID) {
         document.getElementById(formID).classList.remove('active')
     }
 }
-
-
-
-
-        

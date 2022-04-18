@@ -41,6 +41,7 @@
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 100px 1fr;
         max-width: 100%;
+        padding: 0;
     }
 }
 
@@ -53,6 +54,7 @@
         justify-self: flex-start;
     }
 }
+
 .stage__icon--1 {
     grid-area: 1 / 1 / 2 / 2;
 
@@ -70,6 +72,7 @@
         width: 300px;
     }
 }
+
 .stage__icon--2 {
     grid-area: 2 / 3 / 3 / 4;
         
@@ -88,6 +91,7 @@
         width: 300px;
     }
 }
+
 .stage__icon--3 {
     grid-area: 3 / 1 / 4 / 2;
         
@@ -104,6 +108,7 @@
         justify-self: center;
     }
 }
+
 .stage__icon--4 {
     grid-area: 4 / 3 / 5 / 4;
         
@@ -121,6 +126,7 @@
         justify-self: center;
     }
 }
+
 .stage__icon--5 {
     grid-area: 5 / 1 / 6 / 2;
         
@@ -138,6 +144,7 @@
         width: 300px;
     }
 }
+
 .stage__icon--6 {
     grid-area: 6 / 3 / 7 / 4;
         
@@ -145,7 +152,6 @@
         grid-area: 2 / 6 / 3 / 7;
     }
 }
-
 
 .stage__text {
     font-size: 12px;
@@ -176,7 +182,6 @@
 }
 
 .stage__icon {
-
 
     @media (min-width: $desktop-width) {
         width: 100px;

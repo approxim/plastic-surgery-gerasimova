@@ -993,8 +993,8 @@ h3 {
     grid-column: 1/4;
     grid-row: 3/4;
     border: 1px solid #273040;
-    border-left: none !important;
-    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
   }
 }
 
@@ -1545,12 +1545,12 @@ h3 {
 @media (min-width: 768px) {
   .clinic__item {
     flex-direction: row;
-    padding: 30px 25px 0;
+    padding: 30px 25px 0 0;
   }
 }
 @media (min-width: 1440px) {
   .clinic__item {
-    padding: 40px 50px 0;
+    padding: 40px 50px 0 0;
   }
 }
 @media (min-width: 768px) {
@@ -1586,7 +1586,7 @@ h3 {
 }
 @media (min-width: 1440px) {
   .clinic__images {
-    padding-left: 63px;
+    padding-left: 90px;
   }
 }
 .clinic__images div {
@@ -1722,6 +1722,7 @@ h3 {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 100px 1fr;
     max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -2319,10 +2320,22 @@ h3 {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: 20px;
+  right: 20px;
   background-color: #273040;
-  width: 100%;
   height: 1px;
+}
+@media (min-width: 768px) {
+  .footer::after {
+    left: 30px;
+    right: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer::after {
+    left: 60px;
+    right: 60px;
+  }
 }
 
 .footer__tel {
@@ -2739,16 +2752,11 @@ h3 {
 }
 
 .operations .slick-slide {
-  padding: 0 15px;
-}
-@media (min-width: 768px) {
-  .operations .slick-slide {
-    padding: 0 20px;
-  }
+  padding: 0;
 }
 
 .operations .operations__slide {
-  padding-right: 10px;
+  padding-right: 30px;
 }
 @media (min-width: 768px) {
   .operations .operations__slide {
