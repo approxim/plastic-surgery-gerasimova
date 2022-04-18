@@ -1388,6 +1388,7 @@ h3 {
 @media (min-width: 768px) {
   .reviews__title {
     grid-area: 1/2/2/3;
+    padding: 0 20px 0;
     font-size: 25px;
     align-self: flex-end;
   }
@@ -1395,6 +1396,7 @@ h3 {
 @media (min-width: 1440px) {
   .reviews__title {
     font-size: 32px;
+    padding: 0 40px 0;
   }
 }
 
@@ -1413,11 +1415,13 @@ h3 {
     font-size: 16px;
     margin-bottom: 20px;
     align-self: flex-start;
+    overflow-y: auto;
   }
 }
 @media (min-width: 1440px) {
   .reviews__text {
     font-size: 20px;
+    padding: 0 40px 0;
   }
 }
 
@@ -1676,6 +1680,16 @@ h3 {
 
 .stage {
   margin-top: 40px;
+}
+@media (min-width: 768px) {
+  .stage {
+    margin-top: 80px;
+  }
+}
+@media (min-width: 1440px) {
+  .stage {
+    margin-top: 100px;
+  }
 }
 .stage > h2 {
   position: relative;
@@ -2033,10 +2047,8 @@ h3 {
   height: 1px;
 }
 
-.articles__button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
+.articles__item {
+  cursor: pointer;
 }
 
 .articles__img {
@@ -3052,15 +3064,14 @@ h3 {
     font-size: 24px;
     line-height: 120%;
     margin-bottom: 20px;
-    padding-left: 20px;
+    padding-left: 25px;
   }
 }
 .modal-article__content li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0.2rem;
   width: 8px;
   height: 8px;
   background-color: #a98143;
@@ -3070,6 +3081,11 @@ h3 {
   .modal-article__content li::before {
     width: 14px;
     height: 14px;
+  }
+}
+@media (min-width: 1440px) {
+  .modal-article__content li::before {
+    top: 0.5rem;
   }
 }
 

@@ -1,6 +1,14 @@
 .stage {
     margin-top: 40px;
 
+    @media (min-width: $tablet-width) {
+        margin-top: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 100px;
+    }
+
     & > h2 {
         position: relative;
 

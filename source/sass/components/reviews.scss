@@ -94,13 +94,14 @@
 
     @media (min-width: $tablet-width) {
         grid-area: 1 / 2 / 2 / 3;
-
+        padding: 0 20px 0;
         font-size: 25px;
         align-self: flex-end;
     }
 
     @media (min-width: $desktop-width) {
         font-size: 32px;
+        padding: 0 40px 0;
     }
 }
 
@@ -120,9 +121,11 @@
         font-size: 16px;
         margin-bottom: 20px;
         align-self: flex-start;
+        overflow-y: auto;
     }
 
     @media (min-width: $desktop-width) {
         font-size: 20px;
+        padding: 0 40px 0;
     }
 }
