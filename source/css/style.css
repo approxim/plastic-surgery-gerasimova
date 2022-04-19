@@ -2905,10 +2905,10 @@ h3 {
   height: auto;
   max-height: 0;
   opacity: 0;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
   z-index: 1000000;
 }
 .modal-form.active {
@@ -3022,10 +3022,10 @@ h3 {
   height: auto;
   max-height: 0;
   opacity: 0;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
 }
 .modal-article.active {
   background-color: rgba(39, 48, 64, 0.5);
@@ -3155,10 +3155,10 @@ h3 {
   height: auto;
   max-height: 0;
   opacity: 0;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
 }
 .modal-price.active {
   background-color: rgba(39, 48, 64, 0.5);
@@ -3409,10 +3409,10 @@ h3 {
   height: auto;
   max-height: 0;
   opacity: 0;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
 }
 .modal-result.active {
   background-color: rgba(39, 48, 64, 0.5);
@@ -3556,10 +3556,10 @@ h3 {
   height: auto;
   max-height: 0;
   opacity: 0;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
 }
 .modal-send.active {
   background-color: rgba(39, 48, 64, 0.5);

@@ -34,7 +34,7 @@ $("[data-scroll]").on("click", function (event) {
 
 // // Запуск модалки "Запись на консультацию"
 $(".to-appointment").on("click", function () {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'hidden';
     $("#modal__form").addClass("active");
     // .hide().fadeIn('fast'); //плавно присваивает FLEX
     // Закрытие модалки "Запись на консультацию"
@@ -43,7 +43,7 @@ $(".to-appointment").on("click", function () {
         var modalWindow = $('#modal__form'); // окно, в которой находится форма
 
         $("#modal-form__close").on("click", function () {
-            document.body.style.overflow = 'scroll';
+            document.body.style.overflowY = 'scroll';
             $("#modal__form").removeClass("active");
             // .hide('fast');//скрывает див модалки при клике на кнопку закрытия
         });
@@ -52,7 +52,7 @@ $(".to-appointment").on("click", function () {
             && modalForm.has(e.target).length === 0) { // и не по его дочерним элементам
             modalWindow.removeClass("active");
             // .hide('fast'); // скрываем его
-            document.body.style.overflow = 'scroll';
+            document.body.style.overflowY = 'scroll';
         }
     });
 });
@@ -71,7 +71,7 @@ function openWindow(evt, modalArticleId, articleItemId) {
     element.addEventListener("mouseup", function () {
         if (flag === 0) {            
             document.getElementById(modalArticleId).className += " active";
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflowY = 'hidden';
 
             $('#' + modalArticleId + ' .modal-result__tab:first-child').trigger('click');
             
@@ -87,16 +87,12 @@ function openWindow(evt, modalArticleId, articleItemId) {
                 prevArrow: '<div class="prev"></div>',
                 nextArrow: '<div class="next"></div>',
             
-                responsive: [
-                  {
+                responsive: [{
                     breakpoint: 768,
-                    settings: {
-                      // focusOnSelect: false,
-                      slidesToShow: 5,
-                      arrows: false
-                    }
-                  }
-                ]
+                        settings: {
+                        slidesToShow: 5,
+                        arrows: false
+                }}]
             });
             
             // модальное окно Result
@@ -110,18 +106,15 @@ function openWindow(evt, modalArticleId, articleItemId) {
             speed: 300,
             slidesToShow: 1,
             slidesToScroll: 1,
-            responsive: [
-                {
-                breakpoint: 768,
-                settings: {
-                    arrows: true,
-                    dots: false,
-                    prevArrow: '<div class="prev"></div>',
-                    nextArrow: '<div class="next"></div>'
-                }
-                }
-            ]
-            });
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true,
+                        dots: false,
+                        prevArrow: '<div class="prev"></div>',
+                        nextArrow: '<div class="next"></div>'
+                    }
+            }]});
         }
     }, false);
 }
@@ -129,13 +122,13 @@ function openWindow(evt, modalArticleId, articleItemId) {
 // Закрытие модальных окон
 function closeWindow(event, formID, closeButtonID) {
     var modalForm = $("#" + formID); // сама форма
-    var closeButton = $('#' + closeButtonID)
+    var closeButton = $('#' + closeButtonID);
     if (closeButton.is(event.target)) {
-        document.body.style.overflow = 'scroll'
-        document.getElementById(formID).classList.remove('active')
+        document.body.style.overflowY = 'scroll';
+        document.getElementById(formID).classList.remove('active');
     }
     if (modalForm.is(event.target)) { // если клик был не по нашему блоку
-        document.body.style.overflow = 'scroll'
-        document.getElementById(formID).classList.remove('active')
+        document.body.style.overflowY = 'scroll';
+        document.getElementById(formID).classList.remove('active');
     }
 }
