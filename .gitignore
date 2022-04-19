@@ -1,4 +1,5 @@
 node_modules/
 source/css/*
-build/
+build/*
 .git
+README.md
