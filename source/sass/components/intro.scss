@@ -73,7 +73,7 @@
     position: relative;
 
     @media (min-width: $tablet-width) {
-        height: 35%;
+        height: 45%;
 
         flex-direction: row;
         align-items: flex-end;
@@ -94,7 +94,7 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: calc(-30px + 59.5%);
+            left: calc(-30px + 50%);
             background-color: $color-white;
             height: 100%;
             width: 1px;
@@ -106,12 +106,12 @@
     font-family: $font-primary;
     font-size: 36px;
     line-height: 110%;
-    margin-top: 82px;
+    margin-top: 65px;
     z-index: 5;
 
     @media (min-width: $tablet-width) {
         font-size: 40px;
-        width: 60%;
+        width: 50%;
         margin-top: 0;
         align-self: flex-start;
         padding-right: 50px;
@@ -142,11 +142,9 @@
     @media (min-width: $tablet-width) {
         align-items: flex-start;
         height: 100%;
-        width: 40%;
+        width: 50%;
         margin: 0;
     }
-
-
 
     p {
         color: $color-white;
