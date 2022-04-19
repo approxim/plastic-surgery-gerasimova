@@ -1,5 +1,5 @@
 node_modules/
-source/css/*
+#source/css/*
 build/*
 .git
 README.md
