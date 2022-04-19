@@ -1545,6 +1545,7 @@ h3 {
 @media (min-width: 768px) {
   .clinic__item {
     flex-direction: row;
+    justify-content: space-between;
     padding: 30px 25px 0 0;
   }
 }
@@ -1586,7 +1587,7 @@ h3 {
 }
 @media (min-width: 1440px) {
   .clinic__images {
-    padding-left: 90px;
+    max-width: 45%;
   }
 }
 .clinic__images div {
@@ -2046,6 +2047,17 @@ h3 {
   background-color: #273040;
   width: 100%;
   height: 1px;
+}
+
+@media (min-width: 768px) {
+  .articles__list {
+    margin: 0 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .articles__list {
+    margin: 0 25px;
+  }
 }
 
 .articles__item {
@@ -2743,6 +2755,11 @@ h3 {
   }
 }
 
+.slick-disabled {
+  cursor: default !important;
+  filter: grayscale(100%) opacity(25%);
+}
+
 .operations .slick-list {
   padding-right: 20%;
 }
@@ -2788,17 +2805,34 @@ h3 {
   margin-bottom: 0;
 }
 
+@media (min-width: 1440px) {
+  .reviews .slick-slider .slick-arrow.next {
+    right: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .reviews .slick-slider .slick-arrow.prev {
+    left: 0;
+  }
+}
+
 .clinic .slick-slider .slick-arrow.prev {
   left: 0;
 }
 @media (min-width: 1440px) {
   .clinic .slick-slider .slick-arrow.prev {
-    left: 33px;
+    left: -10px;
   }
 }
 
 .clinic .slick-slider .slick-arrow.next {
   right: -30px;
+}
+@media (min-width: 1440px) {
+  .clinic .slick-slider .slick-arrow.next {
+    right: -40px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2817,12 +2851,20 @@ h3 {
 }
 
 .articles .slick-slide {
-  padding: 0 15px;
+  padding-right: 30px;
 }
 @media (min-width: 768px) {
   .articles .slick-slide {
     padding: 0 20px;
   }
+}
+
+.articles .slick-slider .slick-arrow.prev {
+  left: -25px;
+}
+
+.articles .slick-slider .slick-arrow.next {
+  right: -25px;
 }
 
 .modal__close {

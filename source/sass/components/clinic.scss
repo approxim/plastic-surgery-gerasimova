@@ -110,7 +110,9 @@
 
     @media (min-width: $tablet-width) {
         flex-direction: row;
+        justify-content: space-between;
         padding: 30px 25px 0 0;
+        // gap: 60px;
     }
 
     @media (min-width: $desktop-width) {
@@ -145,10 +147,14 @@
         width: 50%;
         order: 2;
         padding-left: 30px;
+        // max-width: 45%;
     }
 
     @media (min-width: $desktop-width) {
-        padding-left: 90px;
+        // padding-left: 60px;
+        // max-width: 45%;
+        max-width: 45%;
+        // margin-right: 30px;
     }
 
     div {
