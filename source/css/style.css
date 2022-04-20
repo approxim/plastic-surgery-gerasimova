@@ -2867,6 +2867,11 @@ h3 {
   right: -25px;
 }
 
+.modal-result__content .slick-dots {
+  width: 100%;
+  bottom: -34px !important;
+}
+
 .modal__close {
   position: absolute;
   right: 10px;
@@ -3529,6 +3534,7 @@ h3 {
   width: auto;
   max-width: 300px;
   display: block;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .modal-result__button {

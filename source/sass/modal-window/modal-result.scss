@@ -107,6 +107,7 @@
     width: auto;
     max-width: 300px;
     display: block;
+    white-space: nowrap;
 
     @media(min-width: $tablet-width) {
         margin-top: 48px;
