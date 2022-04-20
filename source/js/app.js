@@ -44,6 +44,7 @@ $(".to-appointment").on("click", function () {
 
         $("#modal-form__close").on("click", function () {
             document.body.style.overflowY = 'scroll';
+            document.body.style.webkitOverflowScrolling = 'touch';
             $("#modal__form").removeClass("active");
             // .hide('fast');//скрывает див модалки при клике на кнопку закрытия
         });
@@ -53,6 +54,7 @@ $(".to-appointment").on("click", function () {
             modalWindow.removeClass("active");
             // .hide('fast'); // скрываем его
             document.body.style.overflowY = 'scroll';
+            document.body.style.webkitOverflowScrolling = 'touch';
         }
     });
 });
@@ -125,10 +127,12 @@ function closeWindow(event, formID, closeButtonID) {
     var closeButton = $('#' + closeButtonID);
     if (closeButton.is(event.target)) {
         document.body.style.overflowY = 'scroll';
+        document.body.style.webkitOverflowScrolling = 'touch';
         document.getElementById(formID).classList.remove('active');
     }
     if (modalForm.is(event.target)) { // если клик был не по нашему блоку
         document.body.style.overflowY = 'scroll';
+        document.body.style.webkitOverflowScrolling = 'touch';
         document.getElementById(formID).classList.remove('active');
     }
 }
