@@ -67,6 +67,13 @@ function openResult(pageName, elmnt) {
     }
     // даем класс эктив нажатой кнопке
     elmnt.className += " active";
+
+
+    // Кастомная реализация lazy load
+    let imageSet = document.querySelectorAll("#" + pageName + " img");
+    $(imageSet).each(function () {
+        $(this).attr('srcset', $(this).data('lazy-srcset'));
+    });
 }
 // Кликаем по кнопке слайдера Result
 document.querySelector("modal-result__tab")

@@ -97,7 +97,7 @@ function openWindow(evt, modalArticleId, articleItemId) {
             
             // модальное окно Result
             $('#' + modalArticleId + ' .modal-result__slides').slick({
-            lazyLoad: 'ondemand',
+            // lazyLoad: 'ondemand',
             mobileFirst: true,
             dots: true,
             infinite: false,
