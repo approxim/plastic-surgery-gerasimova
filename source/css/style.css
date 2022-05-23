@@ -2288,6 +2288,9 @@ h3 {
   }
 }
 
+.feedback__image {
+  display: none;
+}
 @media (min-width: 1440px) {
   .feedback__image {
     display: block;

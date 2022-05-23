@@ -190,6 +190,8 @@
 
 .feedback__image {
 
+    display: none;
+
     @media(min-width: $desktop-width) {
         display: block;
         width: 40%;
