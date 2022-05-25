@@ -367,12 +367,13 @@
                         <div class="clinic__info">
                             <p class="clinic__text">Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!
                             Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.</p>
-                            <a href="#">
-                                <address class="clinic__address">
-                                    <span>Адрес: </span>
-                                    <span>Красноярск, ул. Парам-Парам, 15</span>
-                                </address>
-                            </a>
+
+                            <address class="clinic__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                <span>Адрес: </span>
+                                <span itemprop="addressLocality">г. Красноярск</span>, 
+                                <span itemprop="streetAddress">ул. Парам-Парам, 15</span>
+                            </address>
+
                             <button class="clinic__button brown-button to-appointment">Записаться на прием</button>
                         </div>
                     </div>
@@ -392,12 +393,13 @@
                             <p class="clinic__text">Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.
 
                             Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!</p>
-                            <a href="#">
-                                <address class="clinic__address">
-                                    <span>Адрес: </span>
-                                    <span>Абакан, ул. Советская 33</span>
-                                </address>
-                            </a>
+
+                            <address class="clinic__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                <span>Адрес: </span>
+                                <span itemprop="addressLocality">г. Абакан</span>, 
+                                <span itemprop="streetAddress">ул. Советская 33</span>
+                            </address>
+
                             <button class="clinic__button brown-button to-appointment">Записаться на прием</button>
                         </div>
                     </div>
@@ -459,15 +461,15 @@
         <section class="faq container" id="faq">
             <h2 class="visually-hidden">FAQ</h2>
 
-            <ul class="faq__wrapper">
+            <ul class="faq__wrapper" itemscope itemtype="https://schema.org/FAQPage">
                 <li class="faq__inner faq__inner--title">
                     <p>FAQ</p>
                 </li>
 
-                <li class="faq__inner">
-                    <button class="faq__title">Какие факторы влияют на успешный исход пластики?</button>
-                    <div class="faq__panel">
-                        <p class="faq__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, quis! Iure, id, nam magnam quas perspiciatis exercitationem tempora, perferendis impedit qui labore quod? Suscipit quod magnam id nemo accusamus dolor!</p>
+                <li class="faq__inner" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq__title" itemprop="name">Какие факторы влияют на успешный исход пластики?</button>
+                    <div class="faq__panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="faq__description" itemprop="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, quis! Iure, id, nam magnam quas perspiciatis exercitationem tempora, perferendis impedit qui labore quod? Suscipit quod magnam id nemo accusamus dolor!</p>
                     </div>
                 </li>
 
