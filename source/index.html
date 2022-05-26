@@ -87,16 +87,19 @@
         </section>
 
         <!-- О докторе -->
-        <section class="aboutme container" id="aboutme">
+        <section class="aboutme container" id="aboutme" itemscope itemtype="https://schema.org/Physician">
             <h2>миссия</h2>
 
             <div class="aboutme__wrapper">
-                <img class="aboutme__image" src="media/images/dr-gerasimova.jpg" srcset="media/images/dr-gerasimova@2x.jpg 2x" alt="Доктор Герасимова" width="157" height="158">
+                <span class="visually-hidden" itemprop="name">Анна Герасимова</span>
+                <span class="visually-hidden" itemprop="telephone">+7 923 315 18 44</span>
+                <img class="aboutme__image" itemprop="image" src="media/images/dr-gerasimova.jpg" srcset="media/images/dr-gerasimova@2x.jpg 2x" alt="Доктор Герасимова" width="157" height="158">
 
                 <blockquote class="aboutme__cite">“Для меня главное, чтобы мой пациент вышел из стен клиники счастливым, гармоничным и уверенным. Приятно видеть, как вы становитесь красивей, сильнее, меняете образ жизни, находите себя и свой путь к счастью”</blockquote>
 
                 <div class="aboutme__inner">
                     <p class="aboutme__consultation">
+                        <span class="visually-hidden" itemprop="priceRange">0</span>
                         <span>Бесплатная консультация</span>
                     </p>
 
@@ -338,7 +341,7 @@
         </section>
 
         <!-- О клинике -->
-        <section class="clinic container" id="clinic">
+        <section class="clinic container" id="clinic" >
             <h2 class="visually-hidden">о клинике</h2>
             <div class="clinic__control">
                 <p class="clinic__title">о клинике</p>
@@ -354,18 +357,19 @@
             </div>
 
             <ul class="clinic__wrapper">
-                <li class="clinic__inner" id="clinic-krasnoyarsk">
+                <li class="clinic__inner" id="clinic-krasnoyarsk" itemscope itemtype="https://schema.org/Hospital">
                     <div class="clinic__item">
                         <div class="clinic__images">
                             <div>
-                                <img class="clinic__image" src="media/images/about-1.jpg" srcset="media/images/about-1@2x.jpg 2x" alt="наша клиника" width="256" height="276">
+                                <img class="clinic__image" itemprop="image" src="media/images/about-1.jpg" srcset="media/images/about-1@2x.jpg 2x" alt="наша клиника" width="256" height="276">
                             </div>
                             <div>
-                                <img class="clinic__image" src="media/images/med_clinic_sample.jpg" srcset="media/images/med_clinic_sample.jpg 2x" alt="наша клиника" width="256" height="276">
+                                <img class="clinic__image" itemprop="image" src="media/images/med_clinic_sample.jpg" srcset="media/images/med_clinic_sample.jpg 2x" alt="наша клиника" width="256" height="276">
                             </div>
                         </div>
                         <div class="clinic__info">
-                            <p class="clinic__text">Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!
+                            <span class="visually-hidden" itemprop="telephone">+7 923 315 18 44</span>
+                            <p class="clinic__text" itemprop="description">Персонал клиники "2А" в течение многих лет занимаются практической медициной и наработали бесценный опыт, завоев доверие своих пациентов. Работать в такой команде для меня бесценный опыт и удовольствие!
                             Клиника "2А" - динамично развивающаяся медицинская организация в области косметологии и хирургии. Преимуществом клиники является то, что подготовиться к операции можно не выходя из стен клиники: здесь можно пройти лабораторную диагностику через исследование различных видов анализов.</p>
 
                             <address class="clinic__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -466,9 +470,9 @@
                     <p>FAQ</p>
                 </li>
 
-                <li class="faq__inner" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <li class="faq__inner" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="faq__title" itemprop="name">Какие факторы влияют на успешный исход пластики?</button>
-                    <div class="faq__panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div class="faq__panel" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <p class="faq__description" itemprop="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, quis! Iure, id, nam magnam quas perspiciatis exercitationem tempora, perferendis impedit qui labore quod? Suscipit quod magnam id nemo accusamus dolor!</p>
                     </div>
                 </li>
@@ -686,25 +690,33 @@
     </div>
 
     <!-- Модальное окно со статьями -->
-    <div class="modal-article" id="modal-article_1" onclick="closeWindow(event, 'modal-article_1', 'modal-article-1__close')">
+    <div class="modal-article" id="modal-article_1" itemscope itemtype="https://schema.org/MedicalScholarlyArticle" onclick="closeWindow(event, 'modal-article_1', 'modal-article-1__close')">
         <div class="modal-article__content" id="modal-article-form-1">
             <button class="modal__close" type="button" id="modal-article-1__close"></button>
+            <meta itemprop="headline" content="Рубцы после абдоминопластики">
+            <h3 class="modal-article__title" itemprop="name">Рубцы после абдоминопластики</h3>
 
-            <h3 class="modal-article__title">Рубцы после абдоминопластики</h3>
+            <div class="visually-hidden" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span class="visually-hidden" itemprop="name">Анна Герасимова</span>
+                <span class="visually-hidden" itemprop="affiliation">MEDICI</span>
+                <span class="visually-hidden" itemprop="affiliation">Клиника косметологии и хирургии</span>
+            </div>
 
-            <p>Рубцы после абдоминопластики волнуют практически каждого…</p>
-            <p>Избежать рубцов после абдоминопластики невозможно, так как это операция связана с отслойкой тканей, с большим разрезом, иссечением кожи, обязательным наложением швов.</p>
-            <p>После абдоминопластики, как и любой другой полостной манипуляции, на месте заживления раны появится рубец. Это реакция организма на повреждения. Плотная волокнистая структура внешне и по функциям отличается от здорового кожного покрова: в ней повышенное содержание коллагена (поэтому она упругая), отсутствуют волосяные фолликулы и потовые железы.</p><p>После абдоминопластики, как и любой другой полостной манипуляции, на месте заживления раны появится рубец. Это реакция организма на повреждения. Плотная волокнистая структура внешне и по функциям отличается от здорового кожного покрова: в ней повышенное содержание коллагена (поэтому она упругая), отсутствуют волосяные фолликулы и потовые железы.</p>
-            <ul>
-                <li>
-                    ️Экономия времени и средств на предоперационные исследования
-                </li>
-                <li>
-                    ️️Решение сразу нескольких задач одновременно
-                </li>
-
-                <li>Уменьшение нагрузки - считается, что один более длительный наркоз лучше нескольких коротких</li>
-            </ul>
+            <div itemprop="articleBody">
+                <p>Рубцы после абдоминопластики волнуют практически каждого…</p>
+                <p>Избежать рубцов после абдоминопластики невозможно, так как это операция связана с отслойкой тканей, с большим разрезом, иссечением кожи, обязательным наложением швов.</p>
+                <p>После абдоминопластики, как и любой другой полостной манипуляции, на месте заживления раны появится рубец. Это реакция организма на повреждения. Плотная волокнистая структура внешне и по функциям отличается от здорового кожного покрова: в ней повышенное содержание коллагена (поэтому она упругая), отсутствуют волосяные фолликулы и потовые железы.</p><p>После абдоминопластики, как и любой другой полостной манипуляции, на месте заживления раны появится рубец. Это реакция организма на повреждения. Плотная волокнистая структура внешне и по функциям отличается от здорового кожного покрова: в ней повышенное содержание коллагена (поэтому она упругая), отсутствуют волосяные фолликулы и потовые железы.</p>
+                <ul>
+                    <li>
+                        ️Экономия времени и средств на предоперационные исследования
+                    </li>
+                    <li>
+                        ️️Решение сразу нескольких задач одновременно
+                    </li>
+    
+                    <li>Уменьшение нагрузки - считается, что один более длительный наркоз лучше нескольких коротких</li>
+                </ul>
+            </div>            
         </div>
     </div>
 
@@ -728,24 +740,25 @@
 
 
     <!-- Модальное окно прайса -->
-    <div class="modal-price" id="modal-price_1" onclick="closeWindow(event, 'modal-price_1', 'modal-price-1__close')">
+    <div class="modal-price" id="modal-price_1" onclick="closeWindow(event, 'modal-price_1', 'modal-price-1__close')" itemscope itemtype="https://schema.org/Offer">
         <div class="modal-price__content" id="modal-price-form-1">
             <button class="modal__close" type="button" id="modal-price-1__close"></button>
 
             <div class="modal-price__operation">
-                <p class="modal-price__operation-title modal-price__title">Риносептопластика и ринопластика</p>
+                <p class="modal-price__operation-title modal-price__title" itemprop="name">Риносептопластика и ринопластика</p>
                 <p class="modal-price__operation-desc">операция по изменению формы носа</p>
 
                 <div class="modal-price__operation-item modal-price__item">
                     <p class="modal-price__operation-name modal-price__name">Ринопластика первичная</p>
                     <p class="modal-price__operation-cost modal-price__cost">
-                        <span>220 000</span>
+                        <span itemprop="price">220 000</span>
+                        <meta itemprop="priceCurrency" content="RUB"/>
                         <span>руб.</span>
                     </p>
                 </div>
 
                 <div class="modal-price__operation-item modal-price__item">
-                    <p class="modal-price__operation-name modal-price__name">Ринопластика вторичная</p>
+                    <p class="modal-price__operation-name modal-price__name" itemprop="name">Ринопластика вторичная</p>
                     <p class="modal-price__operation-cost modal-price__cost">
                         <span>280 000</span>
                         <span>руб.</span>
@@ -754,7 +767,7 @@
             </div>
 
             <div class="modal-price__anesthesia">
-                <p class="modal-price__anesthesia-title modal-price__title">Анестезия</p>
+                <p class="modal-price__anesthesia-title modal-price__title" itemprop="addOn">Анестезия</p>
 
                 <div class="modal-price__anesthesia-item modal-price__item">
                     <div>
