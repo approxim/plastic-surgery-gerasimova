@@ -1,208 +1,256 @@
 .feedback {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
 
-    @media(min-width: $tablet-width) {
-        margin-top: 55px;
-    }
+  @media (min-width: $tablet-width) {
+    margin-top: 55px;
+  }
 
-    @media(min-width: $desktop-width) {
-        flex-direction: row;
-    }
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .feedback__form {
-    background-color: $color-dark;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  background-color: $color-dark;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    @media(min-width: $tablet-width) {
-        padding: 40px;
-    }
+  @media (min-width: $tablet-width) {
+    padding: 40px;
+  }
 
-    @media(min-width: $desktop-width) {
-        padding: 80px;
-        width: 60%;
-    }
+  @media (min-width: $desktop-width) {
+    padding: 80px;
+    width: 60%;
+  }
 }
 
 .feedback__title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 110%;
-    margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 20px;
 
-    @media(min-width: $tablet-width) {
-        font-size: 24px;
-        margin-bottom: 32px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
 
-    @media(min-width: $desktop-width) {
-        font-size: 28px;
-    }
+  @media (min-width: $desktop-width) {
+    font-size: 28px;
+  }
 }
 
 .feedback__feels {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 
-    @media(min-width: $tablet-width) {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 28px;
-    }
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+  }
 }
 
 .feedback__feel {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
 
-    @media(min-width: $tablet-width) {
-        margin-bottom: 28px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
+
+  span {
+    font-family: 'Inter';
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 4px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
     }
+  }
 
-    span {
-        font-family: "Inter";
-        font-size: 14px;
-        line-height: 22px;
-        font-weight: 400;
-        margin-bottom: 4px;
+  input,
+  textarea {
+    padding: 8px 16px;
+    border: 1px solid $color-gray;
+    border-radius: 3px;
+    background-color: transparent;
+    color: $color-white;
+    width: 100%;
+    box-sizing: border-box;
 
-        @media(min-width: $tablet-width) {
-            font-size: 16px;
-        }
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
     }
-
-    input, textarea {
-        padding: 8px 16px;
-        border: 1px solid $color-gray;
-        border-radius: 3px;
-        background-color: transparent;
-        color: $color-white;
-        width: 100%;
-        box-sizing: border-box;
-
-        @media(min-width: $tablet-width) {
-            font-size: 16px;
-        }
-    }
+  }
 }
 
 .feedback__name {
-    @media(min-width: $tablet-width) {
-        grid-column: 1 / 2;
-    }
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+  }
 }
 
 .feedback__tel {
-    @media(min-width: $tablet-width) {
-        grid-column: 2 / 3;
-    }
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+  }
 }
 
 .feedback__text {
-    @media(min-width: $tablet-width) {
-        grid-column: 1 / 3;
-    }
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 3;
+  }
 }
 
 .feedback__city-choice {
-    font-size: 14px;
-    margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
 
-    @media(min-width: $tablet-width) {
-        font-size: 20px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .feedback__radio {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    @media(min-width: $tablet-width) {
-        width: 300px;
-    }
+  @media (min-width: $tablet-width) {
+    // width: 300px;
+  }
 }
 
 .feedback__city {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-    font-size: 14px;
-    margin-bottom: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 8px;
 
-    @media(min-width: $tablet-width) {
-        font-size: 20px;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  &--krasnoyarsk {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &--abakan {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @media (min-width: $tablet-width) {
+      justify-self: flex-end;
     }
+  }
 
-    &--krasnoyarsk {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
 
-    &--abakan {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+  input + .feedback__mark {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    outline: 1px solid $color-gray;
+    outline-offset: 3px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+  }
 
-        @media(min-width: $tablet-width) {
-            justify-self: flex-end;
-        }
-    }
-
-    &:last-of-type {
-        margin-bottom: 16px;
-    }
-
-    input + .feedback__mark {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        outline: 1px solid $color-gray;
-        outline-offset: 3px;
-        margin-bottom: 2px;
-        margin-left: 5px;
-    }
-
-    input:checked + .feedback__mark {
-        outline-color: $color-brown;
-        background-color: $color-brown;
-    }
+  input:checked + .feedback__mark {
+    outline-color: $color-brown;
+    background-color: $color-brown;
+  }
 }
 
 .feedback__label {
-    margin-left: 12px;
+  margin-left: 12px;
+}
+
+.feedback__privacy {
+  margin-bottom: 15px;
+
+  input + .feedback__mark--privacy {
+    display: inline-block;
+    border: 1px solid white;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-left: 2px;
+  }
+  input:checked + .feedback__mark--privacy {
+    border-color: #a98143;
+    position: relative;
+
+    &::after {
+      content: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.2 1.1a.9.9 0 0 0-1.3.3L6.8 8.8l-3.3-3c-.6-.6-1.1-.3-1.3 0L1.1 7c-.4.4-.2.9 0 1.1l4.5 4.2c1 1 2.2.7 2.7 0l6.4-9c.4-.6 0-1-.3-1.3l-1.2-.9Z' fill='%23A98143'/%3E%3C/svg%3E");
+      position: absolute;
+      top: -3px;
+      left: -2px;
+      z-index: 100;
+      width: 10px;
+      height: 15px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #a98143;
+  }
+
+  .feedback__text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+    }
+    @media (min-width: $desktop-width) {
+      font-size: 18px;
+    }
+  }
 }
 
 .feedback__button {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    @media(min-width: $tablet-width) {
-        font-size: 20px;
-    }
+  width: 100%;
+  max-width: 300px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .feedback__image {
+  display: none;
 
-    display: none;
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 40%;
+    background-color: #a39590;
+    background-image: url('../../media/images/feedback-form.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-    @media(min-width: $desktop-width) {
-        display: block;
-        width: 40%;
-        background-color: #a39590;
-        background-image: url('../../media/images/feedback-form.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        @media (min-resolution: 2dppx) {
-            background-image: url('../../media/images/feedback-form@2x.jpg');
-        }
+    @media (min-resolution: 2dppx) {
+      background-image: url('../../media/images/feedback-form@2x.jpg');
     }
+  }
 }

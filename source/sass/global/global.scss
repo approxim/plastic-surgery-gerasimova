@@ -113,7 +113,7 @@ h3 {
   font-size: 14px;
   line-height: 130%;
   font-weight: 600;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -125,10 +125,26 @@ h3 {
 
   &:hover {
     filter: brightness(0.9);
+    // transform: translateY(-7px) scale(1.05);
   }
 
   &:active {
     filter: brightness(0.8);
+  }
+}
+
+.to-appointment {
+  position: relative;
+  overflow: hidden;
+  // z-index: 1500;
+
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 8px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -166,7 +182,6 @@ h3 {
 
   100% {
     opacity: 1;
-
   }
 }
 
@@ -175,6 +190,42 @@ h3 {
     opacity: 1;
   }
 
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes opacity-arrow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
   100% {
     opacity: 0;
   }
